@@ -1,9 +1,7 @@
-#Hazen Health Center App
-
-Mobile iOS App
+#SUNY Brockport Health Center App
 
 Professors: Owusu & Kulkarni
 
-SUNY Brockport Research Project
+SUNY Brockport Research Project - Mobile iOS App Development
 
 Students: Corey Bright & Elijah Tay
