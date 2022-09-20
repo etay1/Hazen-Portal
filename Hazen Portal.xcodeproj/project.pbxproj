@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6AC163E928D982FB00A21628 /* Hazen_PortalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC163E828D982FB00A21628 /* Hazen_PortalApp.swift */; };
+		6AC163EB28D982FB00A21628 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC163EA28D982FB00A21628 /* ContentView.swift */; };
+		6AC163ED28D9830B00A21628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC163EC28D9830B00A21628 /* Assets.xcassets */; };
+		6AC163F028D9830B00A21628 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC163EF28D9830B00A21628 /* Preview Assets.xcassets */; };
+		6AC163FA28D9830D00A21628 /* Hazen_PortalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC163F928D9830D00A21628 /* Hazen_PortalTests.swift */; };
+		6AC1640428D9830D00A21628 /* Hazen_PortalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1640328D9830D00A21628 /* Hazen_PortalUITests.swift */; };
+		6AC1640628D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1640528D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6AC163F628D9830D00A21628 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AC163DD28D982FB00A21628 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AC163E428D982FB00A21628;
+			remoteInfo = "Hazen Portal";
+		};
+		6AC1640028D9830D00A21628 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AC163DD28D982FB00A21628 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AC163E428D982FB00A21628;
+			remoteInfo = "Hazen Portal";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6AC163E528D982FB00A21628 /* Hazen Portal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hazen Portal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC163E828D982FB00A21628 /* Hazen_PortalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hazen_PortalApp.swift; sourceTree = "<group>"; };
+		6AC163EA28D982FB00A21628 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6AC163EC28D9830B00A21628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6AC163EF28D9830B00A21628 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6AC163F528D9830D00A21628 /* Hazen PortalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hazen PortalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC163F928D9830D00A21628 /* Hazen_PortalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hazen_PortalTests.swift; sourceTree = "<group>"; };
+		6AC163FF28D9830D00A21628 /* Hazen PortalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hazen PortalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC1640328D9830D00A21628 /* Hazen_PortalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hazen_PortalUITests.swift; sourceTree = "<group>"; };
+		6AC1640528D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hazen_PortalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6AC163E228D982FB00A21628 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC163F228D9830D00A21628 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC163FC28D9830D00A21628 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AC163DC28D982FB00A21628 = {
+			isa = PBXGroup;
+			children = (
+				6AC163E728D982FB00A21628 /* Hazen Portal */,
+				6AC163F828D9830D00A21628 /* Hazen PortalTests */,
+				6AC1640228D9830D00A21628 /* Hazen PortalUITests */,
+				6AC163E628D982FB00A21628 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6AC163E628D982FB00A21628 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AC163E528D982FB00A21628 /* Hazen Portal.app */,
+				6AC163F528D9830D00A21628 /* Hazen PortalTests.xctest */,
+				6AC163FF28D9830D00A21628 /* Hazen PortalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AC163E728D982FB00A21628 /* Hazen Portal */ = {
+			isa = PBXGroup;
+			children = (
+				6AC163E828D982FB00A21628 /* Hazen_PortalApp.swift */,
+				6AC163EA28D982FB00A21628 /* ContentView.swift */,
+				6AC163EC28D9830B00A21628 /* Assets.xcassets */,
+				6AC163EE28D9830B00A21628 /* Preview Content */,
+			);
+			path = "Hazen Portal";
+			sourceTree = "<group>";
+		};
+		6AC163EE28D9830B00A21628 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6AC163EF28D9830B00A21628 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6AC163F828D9830D00A21628 /* Hazen PortalTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AC163F928D9830D00A21628 /* Hazen_PortalTests.swift */,
+			);
+			path = "Hazen PortalTests";
+			sourceTree = "<group>";
+		};
+		6AC1640228D9830D00A21628 /* Hazen PortalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6AC1640328D9830D00A21628 /* Hazen_PortalUITests.swift */,
+				6AC1640528D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift */,
+			);
+			path = "Hazen PortalUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6AC163E428D982FB00A21628 /* Hazen Portal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AC1640928D9830D00A21628 /* Build configuration list for PBXNativeTarget "Hazen Portal" */;
+			buildPhases = (
+				6AC163E128D982FB00A21628 /* Sources */,
+				6AC163E228D982FB00A21628 /* Frameworks */,
+				6AC163E328D982FB00A21628 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hazen Portal";
+			productName = "Hazen Portal";
+			productReference = 6AC163E528D982FB00A21628 /* Hazen Portal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6AC163F428D9830D00A21628 /* Hazen PortalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AC1640C28D9830D00A21628 /* Build configuration list for PBXNativeTarget "Hazen PortalTests" */;
+			buildPhases = (
+				6AC163F128D9830D00A21628 /* Sources */,
+				6AC163F228D9830D00A21628 /* Frameworks */,
+				6AC163F328D9830D00A21628 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AC163F728D9830D00A21628 /* PBXTargetDependency */,
+			);
+			name = "Hazen PortalTests";
+			productName = "Hazen PortalTests";
+			productReference = 6AC163F528D9830D00A21628 /* Hazen PortalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6AC163FE28D9830D00A21628 /* Hazen PortalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AC1640F28D9830D00A21628 /* Build configuration list for PBXNativeTarget "Hazen PortalUITests" */;
+			buildPhases = (
+				6AC163FB28D9830D00A21628 /* Sources */,
+				6AC163FC28D9830D00A21628 /* Frameworks */,
+				6AC163FD28D9830D00A21628 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AC1640128D9830D00A21628 /* PBXTargetDependency */,
+			);
+			name = "Hazen PortalUITests";
+			productName = "Hazen PortalUITests";
+			productReference = 6AC163FF28D9830D00A21628 /* Hazen PortalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6AC163DD28D982FB00A21628 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					6AC163E428D982FB00A21628 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					6AC163F428D9830D00A21628 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 6AC163E428D982FB00A21628;
+					};
+					6AC163FE28D9830D00A21628 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 6AC163E428D982FB00A21628;
+					};
+				};
+			};
+			buildConfigurationList = 6AC163E028D982FB00A21628 /* Build configuration list for PBXProject "Hazen Portal" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6AC163DC28D982FB00A21628;
+			productRefGroup = 6AC163E628D982FB00A21628 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6AC163E428D982FB00A21628 /* Hazen Portal */,
+				6AC163F428D9830D00A21628 /* Hazen PortalTests */,
+				6AC163FE28D9830D00A21628 /* Hazen PortalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6AC163E328D982FB00A21628 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC163F028D9830B00A21628 /* Preview Assets.xcassets in Resources */,
+				6AC163ED28D9830B00A21628 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC163F328D9830D00A21628 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC163FD28D9830D00A21628 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AC163E128D982FB00A21628 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC163EB28D982FB00A21628 /* ContentView.swift in Sources */,
+				6AC163E928D982FB00A21628 /* Hazen_PortalApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC163F128D9830D00A21628 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC163FA28D9830D00A21628 /* Hazen_PortalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC163FB28D9830D00A21628 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC1640428D9830D00A21628 /* Hazen_PortalUITests.swift in Sources */,
+				6AC1640628D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6AC163F728D9830D00A21628 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AC163E428D982FB00A21628 /* Hazen Portal */;
+			targetProxy = 6AC163F628D9830D00A21628 /* PBXContainerItemProxy */;
+		};
+		6AC1640128D9830D00A21628 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AC163E428D982FB00A21628 /* Hazen Portal */;
+			targetProxy = 6AC1640028D9830D00A21628 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6AC1640728D9830D00A21628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6AC1640828D9830D00A21628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6AC1640A28D9830D00A21628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hazen Portal/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SUNY-Brockport.Hazen-Portal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6AC1640B28D9830D00A21628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hazen Portal/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SUNY-Brockport.Hazen-Portal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6AC1640D28D9830D00A21628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SUNY-Brockport.Hazen-PortalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hazen Portal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hazen Portal";
+			};
+			name = Debug;
+		};
+		6AC1640E28D9830D00A21628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SUNY-Brockport.Hazen-PortalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hazen Portal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hazen Portal";
+			};
+			name = Release;
+		};
+		6AC1641028D9830D00A21628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SUNY-Brockport.Hazen-PortalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Hazen Portal";
+			};
+			name = Debug;
+		};
+		6AC1641128D9830D00A21628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SUNY-Brockport.Hazen-PortalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Hazen Portal";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6AC163E028D982FB00A21628 /* Build configuration list for PBXProject "Hazen Portal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AC1640728D9830D00A21628 /* Debug */,
+				6AC1640828D9830D00A21628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AC1640928D9830D00A21628 /* Build configuration list for PBXNativeTarget "Hazen Portal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AC1640A28D9830D00A21628 /* Debug */,
+				6AC1640B28D9830D00A21628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AC1640C28D9830D00A21628 /* Build configuration list for PBXNativeTarget "Hazen PortalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AC1640D28D9830D00A21628 /* Debug */,
+				6AC1640E28D9830D00A21628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AC1640F28D9830D00A21628 /* Build configuration list for PBXNativeTarget "Hazen PortalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AC1641028D9830D00A21628 /* Debug */,
+				6AC1641128D9830D00A21628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6AC163DD28D982FB00A21628 /* Project object */;
+}
