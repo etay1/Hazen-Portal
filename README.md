@@ -1,5 +1,4 @@
-# Hazen-Portal
-Hazen Health Center App
+#Hazen Health Center App
 
 Professors: Owusu & Kulkarni
 
