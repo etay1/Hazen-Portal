@@ -14,6 +14,7 @@
 		6AC163FA28D9830D00A21628 /* Hazen_PortalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC163F928D9830D00A21628 /* Hazen_PortalTests.swift */; };
 		6AC1640428D9830D00A21628 /* Hazen_PortalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1640328D9830D00A21628 /* Hazen_PortalUITests.swift */; };
 		6AC1640628D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1640528D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift */; };
+		A8FCBA7728DB595B00CBF524 /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8FCBA7628DB595B00CBF524 /* Outfit-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		6AC163FF28D9830D00A21628 /* Hazen PortalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hazen PortalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC1640328D9830D00A21628 /* Hazen_PortalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hazen_PortalUITests.swift; sourceTree = "<group>"; };
 		6AC1640528D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hazen_PortalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A86EA70928DA7AED00343BF5 /* Hazen-Portal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Hazen-Portal-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A8FCBA7628DB595B00CBF524 /* Outfit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +97,11 @@
 		6AC163E728D982FB00A21628 /* Hazen Portal */ = {
 			isa = PBXGroup;
 			children = (
+				A86EA70928DA7AED00343BF5 /* Hazen-Portal-Info.plist */,
 				6AC163E828D982FB00A21628 /* Hazen_PortalApp.swift */,
 				6AC163EA28D982FB00A21628 /* ContentView.swift */,
 				6AC163EC28D9830B00A21628 /* Assets.xcassets */,
+				A86EA70628DA77FD00343BF5 /* Fonts */,
 				6AC163EE28D9830B00A21628 /* Preview Content */,
 			);
 			path = "Hazen Portal";
@@ -125,6 +130,14 @@
 				6AC1640528D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift */,
 			);
 			path = "Hazen PortalUITests";
+			sourceTree = "<group>";
+		};
+		A86EA70628DA77FD00343BF5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A8FCBA7628DB595B00CBF524 /* Outfit-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +246,7 @@
 			files = (
 				6AC163F028D9830B00A21628 /* Preview Assets.xcassets in Resources */,
 				6AC163ED28D9830B00A21628 /* Assets.xcassets in Resources */,
+				A8FCBA7728DB595B00CBF524 /* Outfit-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +433,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Hazen Portal/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Hazen-Portal-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,6 +462,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Hazen Portal/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Hazen-Portal-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
