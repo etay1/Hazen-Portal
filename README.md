@@ -21,7 +21,6 @@ command to run if program contains helper info
 ## Authors
 
 Elijah Tay
-[etay.dev](etay.dev)
 
 Corey Bright
 
