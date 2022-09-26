@@ -14,6 +14,9 @@
 		6AC163FA28D9830D00A21628 /* Hazen_PortalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC163F928D9830D00A21628 /* Hazen_PortalTests.swift */; };
 		6AC1640428D9830D00A21628 /* Hazen_PortalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1640328D9830D00A21628 /* Hazen_PortalUITests.swift */; };
 		6AC1640628D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1640528D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift */; };
+		A8DFDA7328E1319100E1F78A /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDA7228E1319100E1F78A /* Outfit-Bold.ttf */; };
+		A8DFDA7528E131A300E1F78A /* Outfit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDA7428E131A300E1F78A /* Outfit-Medium.ttf */; };
+		A8DFDA7728E1324300E1F78A /* FontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DFDA7628E1324300E1F78A /* FontStyles.swift */; };
 		A8FCBA7E28DB6FA000CBF524 /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8FCBA7D28DB6FA000CBF524 /* Outfit-Regular.ttf */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,9 @@
 		6AC163FF28D9830D00A21628 /* Hazen PortalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hazen PortalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC1640328D9830D00A21628 /* Hazen_PortalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hazen_PortalUITests.swift; sourceTree = "<group>"; };
 		6AC1640528D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hazen_PortalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A8DFDA7228E1319100E1F78A /* Outfit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Bold.ttf"; sourceTree = "<group>"; };
+		A8DFDA7428E131A300E1F78A /* Outfit-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Medium.ttf"; sourceTree = "<group>"; };
+		A8DFDA7628E1324300E1F78A /* FontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyles.swift; sourceTree = "<group>"; };
 		A8FCBA7D28DB6FA000CBF524 /* Outfit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Regular.ttf"; sourceTree = "<group>"; };
 		A8FCBA7F28DB6FB500CBF524 /* Hazen-Portal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Hazen-Portal-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -101,6 +107,7 @@
 				A8FCBA7C28DB6F8700CBF524 /* Fonts */,
 				6AC163E828D982FB00A21628 /* Hazen_PortalApp.swift */,
 				6AC163EA28D982FB00A21628 /* ContentView.swift */,
+				A8DFDA7628E1324300E1F78A /* FontStyles.swift */,
 				6AC163EC28D9830B00A21628 /* Assets.xcassets */,
 				6AC163EE28D9830B00A21628 /* Preview Content */,
 			);
@@ -135,6 +142,8 @@
 		A8FCBA7C28DB6F8700CBF524 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				A8DFDA7428E131A300E1F78A /* Outfit-Medium.ttf */,
+				A8DFDA7228E1319100E1F78A /* Outfit-Bold.ttf */,
 				A8FCBA7D28DB6FA000CBF524 /* Outfit-Regular.ttf */,
 			);
 			path = Fonts;
@@ -244,8 +253,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8DFDA7328E1319100E1F78A /* Outfit-Bold.ttf in Resources */,
 				6AC163F028D9830B00A21628 /* Preview Assets.xcassets in Resources */,
 				6AC163ED28D9830B00A21628 /* Assets.xcassets in Resources */,
+				A8DFDA7528E131A300E1F78A /* Outfit-Medium.ttf in Resources */,
 				A8FCBA7E28DB6FA000CBF524 /* Outfit-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +284,7 @@
 			files = (
 				6AC163EB28D982FB00A21628 /* ContentView.swift in Sources */,
 				6AC163E928D982FB00A21628 /* Hazen_PortalApp.swift in Sources */,
+				A8DFDA7728E1324300E1F78A /* FontStyles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

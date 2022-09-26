@@ -21,9 +21,11 @@ struct ContentView: View {
     }
     */
     
+
     
     var body: some View {
       
+
   
         ZStack{
             
@@ -36,8 +38,15 @@ struct ContentView: View {
                 Image(systemName: "globe")
                     .imageScale(.large)
                     .foregroundColor(.accentColor)
-                Text("Hello, Elijah!!\nHello, Corey!!")
-                    
+                Text("Hello, Elijah!!\nHello, Corey!!\n")
+                     
+            // test to make sure imported fonts work
+            /*
+                Text("Default Font Test")
+                Text("Imported Font Test")
+                    .font(.loginDetails)
+            */
+                
             }
             .padding()
         }
