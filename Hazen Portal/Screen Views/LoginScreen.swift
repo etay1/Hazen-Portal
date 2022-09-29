@@ -30,6 +30,12 @@ struct LoginScreen: View {
                     VStack {
                         
                         Image("img-logoM")
+                        
+                        Text("MyHazen")
+                            .foregroundColor(.accentColor)
+                            .font(.loginDetails)
+                            .underline(color: .accentColor)
+                        
 
                         
                         Text("Login")
@@ -74,10 +80,13 @@ struct LoginScreen: View {
                         .background(Color.accentColor)
                         .cornerRadius(10)
                         
-                       
+                      
                         .navigationDestination(isPresented: $showingLoginScreen) {
-                            Text("You are logged in @\(username)")
+                            
+                            HomeScreen()
+            
                         }
+                        
                         
                     }
                     

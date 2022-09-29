@@ -15,6 +15,7 @@
 		6AC1640428D9830D00A21628 /* Hazen_PortalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1640328D9830D00A21628 /* Hazen_PortalUITests.swift */; };
 		6AC1640628D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1640528D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift */; };
 		A8DBAC5928E62C78006E829C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DBAC5828E62C78006E829C /* LoginScreen.swift */; };
+		A8DBAC5E28E64827006E829C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DBAC5D28E64827006E829C /* HomeScreen.swift */; };
 		A8DFDA7328E1319100E1F78A /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDA7228E1319100E1F78A /* Outfit-Bold.ttf */; };
 		A8DFDA7528E131A300E1F78A /* Outfit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDA7428E131A300E1F78A /* Outfit-Medium.ttf */; };
 		A8DFDA7728E1324300E1F78A /* FontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DFDA7628E1324300E1F78A /* FontStyles.swift */; };
@@ -50,6 +51,7 @@
 		6AC1640328D9830D00A21628 /* Hazen_PortalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hazen_PortalUITests.swift; sourceTree = "<group>"; };
 		6AC1640528D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hazen_PortalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A8DBAC5828E62C78006E829C /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		A8DBAC5D28E64827006E829C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		A8DFDA7228E1319100E1F78A /* Outfit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Bold.ttf"; sourceTree = "<group>"; };
 		A8DFDA7428E131A300E1F78A /* Outfit-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Medium.ttf"; sourceTree = "<group>"; };
 		A8DFDA7628E1324300E1F78A /* FontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyles.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				A8DBAC5828E62C78006E829C /* LoginScreen.swift */,
+				A8DBAC5D28E64827006E829C /* HomeScreen.swift */,
 			);
 			path = "Screen Views";
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AC163EB28D982FB00A21628 /* ContentView.swift in Sources */,
+				A8DBAC5E28E64827006E829C /* HomeScreen.swift in Sources */,
 				A8DBAC5928E62C78006E829C /* LoginScreen.swift in Sources */,
 				6AC163E928D982FB00A21628 /* Hazen_PortalApp.swift in Sources */,
 				A8DFDA7728E1324300E1F78A /* FontStyles.swift in Sources */,
