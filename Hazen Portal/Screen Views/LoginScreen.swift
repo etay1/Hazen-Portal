@@ -26,7 +26,12 @@ struct LoginScreen: View {
                 ZStack {
                     Color("Background")
                         .edgesIgnoringSafeArea(.all)
+                    
                     VStack {
+                        
+                        Image("img-logoM")
+
+                        
                         Text("Login")
                             .font(.loginDetails)
                             .foregroundColor(.accentColor)
