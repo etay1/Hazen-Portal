@@ -13,12 +13,17 @@ struct HomeScreen: View {
     
     var body: some View {
         
-        ZStack {
-            Color("Background")
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                Image("img-header")
+        ZStack{
+            NavigationStack {
+                
+                ZStack {
+                    Color("Background")
+                        .edgesIgnoringSafeArea(.all)
+                    
+                    VStack {
+                        Image("img-header")
+                    }
+                }
             }
         }
         /*
