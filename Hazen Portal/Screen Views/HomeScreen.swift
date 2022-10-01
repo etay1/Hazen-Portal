@@ -12,15 +12,24 @@ import SwiftUI
 struct HomeScreen: View {
     
     var body: some View {
-        
-        ZStack {
-            Color("Background")
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                Image("img-header")
+        ZStack{
+            NavigationStack {
+                ZStack {
+                    Color("Background")
+                        .edgesIgnoringSafeArea(.all)
+                    
+                    VStack {
+                        
+                        // works but img isnt in assets
+                        Image("img-header")
+                        
+                        
+                    }
+                }
             }
+            .navigationBarHidden(true)
         }
+            
         /*
          So I'm thinking we he have a VStack here
             This will make all elements in here align vertically
@@ -76,3 +85,10 @@ struct HomeScreen: View {
          */
     }
 }
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeScreen()
+    }
+}
+
