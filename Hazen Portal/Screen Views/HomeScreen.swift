@@ -25,6 +25,7 @@ struct HomeScreen: View {
                     }
                 }
             }
+            navigationBarHidden(true)
         }
         /*
          So I'm thinking we he have a VStack here
