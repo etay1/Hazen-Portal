@@ -101,9 +101,9 @@ struct LoginScreen: View {
     
     //authenitcates user, will be changed later to make use of firebase data
     func authenticateUser(username: String, password: String) {
-        if username.lowercased() == "brockport" {
+        if username.lowercased() == "" {
             wrongUsername = 0
-            if password.lowercased() == "brockport" {
+            if password.lowercased() == "" {
                 wrongPassword = 0
                 showingLoginScreen = true
                 
