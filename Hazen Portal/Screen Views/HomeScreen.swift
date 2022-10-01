@@ -12,22 +12,22 @@ import SwiftUI
 struct HomeScreen: View {
     
     var body: some View {
+
+        
         ZStack{
             NavigationStack {
+                
                 ZStack {
                     Color("Background")
                         .edgesIgnoringSafeArea(.all)
                     
                     VStack {
-                        
-                        // works but img isnt in assets
+
                         Image("img-header")
-                        
-                        
                     }
                 }
             }
-            .navigationBarHidden(true)
+            navigationBarHidden(true)
         }
             
         /*
