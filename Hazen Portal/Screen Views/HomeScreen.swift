@@ -13,10 +13,14 @@ struct HomeScreen: View {
     
     var body: some View {
         
-        ZStack{
-            Text("Hello World")
+        ZStack {
+            Color("Background")
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Image("img-header")
+            }
         }
-        
         /*
          So I'm thinking we he have a VStack here
             This will make all elements in here align vertically
