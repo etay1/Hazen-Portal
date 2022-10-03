@@ -10,6 +10,8 @@ import SwiftUI
 
 // Text style and size for all words on login page
 extension Font {
+    
+    // LOGIN PAGE
     static var loginDetails: Font {
         return Font.custom("Outfit-Regular", size: 24)
     }
@@ -29,5 +31,13 @@ extension Font {
     static var socialMedia: Font {
         return Font.custom("Outfit-Medium", size: 12)
     }
+    
+    
+    // HOME SCREEN
+    static var headerText: Font {
+        return Font.custom("Outfit-Medium", size: 14)
+    }
+    
+   
     
 }
