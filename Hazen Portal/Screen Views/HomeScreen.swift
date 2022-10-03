@@ -12,22 +12,27 @@ import SwiftUI
 struct HomeScreen: View {
     
     var body: some View {
-
         
-        ZStack{
+
+        ZStack {
+            
             NavigationStack {
-                
-                ZStack {
+               
+      
+                ZStack(alignment: .top) {
                     Color("Background")
                         .edgesIgnoringSafeArea(.all)
-                    
-                    VStack {
-
-                        Image("img-header")
+                    VStack() {
+                                    
+                        Image("header-logo")
+                        Text("MyHazen")
+                            .font(.headerText)
+                                      
+                            .foregroundColor(.accentColor)
                     }
                 }
             }
-            navigationBarHidden(true)
+            .navigationBarHidden(true)
         }
             
         /*
