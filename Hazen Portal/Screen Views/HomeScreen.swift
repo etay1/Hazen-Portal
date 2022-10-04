@@ -11,30 +11,52 @@ import SwiftUI
 
 struct HomeScreen: View {
     
+  
+    
     var body: some View {
         
-
-        ZStack {
-            
-            NavigationStack {
+    Color("Background")
+            .edgesIgnoringSafeArea(.all)
+            .overlay(
+                VStack{
                
-      
-                ZStack(alignment: .top) {
-                    Color("Background")
-                        .edgesIgnoringSafeArea(.all)
-                    VStack() {
-                                    
-                        Image("header-logo")
-                        Text("MyHazen")
-                            .font(.headerText)
-                                      
-                            .foregroundColor(.accentColor)
+                    HeaderView()
+       
+                    Spacer()
+                    
+                  
+                    HStack (spacing: 75){
+                        
+                        Color.accentColor
+                            .frame(width: 81.71, height:76.82)
+                            .cornerRadius(7)
+                            .overlay(
+                                Image("ic-covid")
+                            )
+                        
+                        Color.accentColor
+                            .frame(width: 81.71, height:76.82)
+                            .cornerRadius(7)
+                            .overlay(
+                                Image("ic-insurance")
+                            )
+                     
+                            //.background(.black)
+
+                        
+                       /* Text("Hello default")
+                        Text("Hello Middle")
+                            .offset(y:-500)
+                        */
+                    
                     }
-                }
-            }
-            .navigationBarHidden(true)
-        }
-            
+                    
+                  
+                
+               
+                })
+                
+      
         /*
          So I'm thinking we he have a VStack here
             This will make all elements in here align vertically
