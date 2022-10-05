@@ -5,28 +5,86 @@
 //  Created by Corey Bright on 9/29/22.
 //
 
+
 import Foundation
 
 import SwiftUI
 
+
+
+func ButtonCreation (icon: String, iconName: String, y_offset : CGFloat) -> AnyView {
+    
+    return AnyView(VStack(alignment: .center){
+
+        Button("") {
+        }
+        
+        Image(systemName: icon)
+            .font(.largeTitle)
+            .foregroundColor(.yellow)
+            .frame(width:81.71, height:76.82)
+            .background(Color.accentColor)
+            .cornerRadius(10)
+            .offset( y: y_offset)
+        Text(iconName)
+            .font(.iconText)
+            .offset( y: y_offset)
+            .foregroundColor(.accentColor)
+
+    })
+    
+
+}
+
+
 struct HomeScreen: View {
     
-  
-    
+    @State private var showingHomeScreen = true
+
     var body: some View {
         
     Color("Background")
             .edgesIgnoringSafeArea(.all)
             .overlay(
+         
                 VStack{
                
                     HeaderView()
        
                     Spacer()
                     
+                    
                   
-                    HStack (spacing: 75){
+                    VStack {
+                
+                        HStack (spacing: 75) {
+                            // FIRST ROW
+                            ButtonCreation(icon: "calendar", iconName: "Appoitments",  y_offset: -115)
+                            ButtonCreation(icon: "ic-covid", iconName: "COVID-19",  y_offset: -115)
+                        }
+                        HStack (spacing: 75) {
+                            // SECOND ROW
+                            ButtonCreation(icon: "syringe", iconName: "Vaccinations",  y_offset: -115)
+                            
+                            ButtonCreation(icon: "umbrella", iconName: "Insurance",  y_offset: -115)
+                        }
                         
+                        // THIRD ROW
+                       
+                        HStack (spacing: 75) {
+                            ButtonCreation(icon: "list.clipboard", iconName: "Forms",  y_offset: -115)
+                            ButtonCreation(icon: "envelope", iconName: "Messages",  y_offset: -115)
+                        }
+                        
+                        // FOURTH ROW
+                        HStack (spacing: 75) {
+                            ButtonCreation(icon: "bell", iconName: "Education", y_offset: -115)
+                            ButtonCreation(icon: "arrow.up.square", iconName: "Upload", y_offset: -115)
+                        }
+                 
+                        
+            
+                        /*
                         Color.accentColor
                             .frame(width: 81.71, height:76.82)
                             .cornerRadius(7)
@@ -43,7 +101,7 @@ struct HomeScreen: View {
                      
                             //.background(.black)
 
-                        
+                        */
                        /* Text("Hello default")
                         Text("Hello Middle")
                             .offset(y:-500)
@@ -56,66 +114,13 @@ struct HomeScreen: View {
                
                 })
                 
-      
-        /*
-         So I'm thinking we he have a VStack here
-            This will make all elements in here align vertically
-            I cant test it now but when I get to the library I will
-         
-         Either a single v stack that has the elements wrap after every 2 icons
-         VStack {
-             Button (with an icon parameter)
-             Button (with an icon parameter)
-             wraps
-             Button (with an icon parameter)
-             Button (with an icon parameter)
-             wraps
-             Button (with an icon parameter)
-             Button (with an icon parameter)
-             wraps
-             Button (with an icon parameter)
-             Button (with an icon parameter)
-         }
-         
-         ORRRR
-         4 VStacks like this
-         
-         VStack{
-            Button (with an icon parameter)
-            Button (with an icon parameter)
-         
-         }
-         VStack{
-            Button (with an icon parameter)
-            Button (with an icon parameter)
-         }
-         VStack{
-            Button (with an icon parameter)
-            Button (with an icon parameter)
-         }
-         VStack{
-            Button (with an icon parameter)
-            Button (with an icon parameter)
-         }
-         
-         
-         Then each button will just have a non authenticated destination to each page in the method body
-         
-         AppointmentScreen()
-         MessagesScreen()
-         etc...
-         
-         The issue here is that I dont think we can use an icon as a parameter it might force us to use a string
-         so if thats the case we can try to create a frame instead and somehow have the frame navigate as a button
-         but ill trial and error it tomorrow and try a few methods when i can preview everything
-         
-         */
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         HomeScreen()
     }
 }
+
 

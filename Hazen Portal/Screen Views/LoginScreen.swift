@@ -118,3 +118,8 @@ struct LoginScreen: View {
     
 }
 
+struct LoginScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginScreen()
+    }
+}

@@ -38,6 +38,9 @@ extension Font {
         return Font.custom("Outfit-Medium", size: 14)
     }
     
+    static var iconText: Font {
+        return Font.custom("Outfit-Regular", size: 12)
+    }
    
     
 }

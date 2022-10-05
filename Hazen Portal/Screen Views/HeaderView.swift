@@ -9,11 +9,14 @@ import SwiftUI
 
 struct HeaderView: View {
     var body: some View {
-                VStack {
-                    Image("header-logo")
-                    Text("MyHazen")
-                }
-                .padding()
+        VStack {
+                    
+            Image("header-logo")
+                .offset(y:-65)
+            Text("MyHazen")
+                .offset(y:-65)
+        }
+            .padding()
                 
             
     }
