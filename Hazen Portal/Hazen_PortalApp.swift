@@ -11,7 +11,7 @@ import SwiftUI
 struct Hazen_PortalApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginScreen()
+            LoginView()
         }
     }
 }
