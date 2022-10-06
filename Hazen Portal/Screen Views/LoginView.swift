@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct LoginScreen: View {
+struct LoginView: View {
     
     
     @State private var username = ""
@@ -83,7 +83,7 @@ struct LoginScreen: View {
                       
                         .navigationDestination(isPresented: $showingLoginScreen) {
                             
-                            HomeScreen()
+                            HomeView()
             
                         }
                         
@@ -120,6 +120,6 @@ struct LoginScreen: View {
 
 struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LoginScreen()
+        LoginView()
     }
 }
