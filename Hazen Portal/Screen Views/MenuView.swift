@@ -16,9 +16,9 @@ func ButtonCreation (icon: String, iconName: String, y_offset : CGFloat, destina
     
     return AnyView(NavigationStack {
      
-        VStack {
+    //    VStack {
+            
                 Button(action:{
-                    
                 }) {
                     
                     NavigationLink(destination: destination, label: {
@@ -38,7 +38,7 @@ func ButtonCreation (icon: String, iconName: String, y_offset : CGFloat, destina
                 .font(.iconText)
                 .offset( y: y_offset)
                 .foregroundColor(.accentColor)
-            }
+          //  }
  
     })
 }
