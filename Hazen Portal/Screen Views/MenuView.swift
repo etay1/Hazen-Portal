@@ -16,18 +16,19 @@ func ButtonCreation (icon: String, iconName: String, y_offset : CGFloat, destina
     
     return AnyView(NavigationStack {
      
-    //    VStack {
+        VStack {
             
                 Button(action:{
+                   
                 }) {
                     
                     NavigationLink(destination: destination, label: {
                     
                         Image(systemName: icon)
                             .font(.largeTitle)
-                            .foregroundColor(.yellow)
+                            .foregroundColor(Color("Background"))
                             .frame(width:81.71, height:76.82)
-                            .background(Color.accentColor)
+                            .background(Color("AccentColor"))
                             .cornerRadius(10)
                         
                     })
@@ -37,8 +38,8 @@ func ButtonCreation (icon: String, iconName: String, y_offset : CGFloat, destina
             Text(iconName)
                 .font(.iconText)
                 .offset( y: y_offset)
-                .foregroundColor(.accentColor)
-          //  }
+                .foregroundColor(Color("AccentColor"))
+            }
  
     })
 }

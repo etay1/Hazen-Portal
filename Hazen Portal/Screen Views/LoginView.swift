@@ -21,6 +21,7 @@ struct LoginView: View {
     var body: some View {
   
         ZStack{
+            
             NavigationStack {
                 
                 ZStack {
@@ -45,10 +46,11 @@ struct LoginView: View {
                         
                         TextField("NetId" + "@Brockport.edu", text: $username)
                             .font(.loginPrompt)
+                            .foregroundColor(Color("AccentColor"))
                             .padding()
                             .frame(width:351, height: 65)
                             .background(Color.black.opacity(0.05))
-                            // ins't working
+                       
                             
                         
                         // default border color
@@ -60,6 +62,7 @@ struct LoginView: View {
                         
                         SecureField("Password", text: $password)
                             .font(.loginPrompt)
+                            .foregroundColor(Color("AccentColor"))
                             .padding()
                             .frame(width:351, height: 65)
                             .background(Color.black.opacity(0.05))
@@ -75,7 +78,7 @@ struct LoginView: View {
                         Button("Login") {
                             authenticateUser(username: username, password: password)
                         }
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("Background"))
                         .frame(width:351, height:65)
                         .background(Color.accentColor)
                         .cornerRadius(10)
