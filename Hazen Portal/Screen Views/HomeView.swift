@@ -1,54 +1,39 @@
 //
-//  HomeScreen.swift
+//  HomeView2.swift
 //  Hazen Portal
 //
-//  Created by Corey Bright on 9/29/22.
+//  Created by Corey Bright on 10/12/22.
 //
-
-
-import Foundation
 
 import SwiftUI
 
-
-
-
 struct HomeView: View {
-    
-    @State private var showingHomeScreen = true
-
     var body: some View {
         
-    Color("Background")
-            .edgesIgnoringSafeArea(.all)
-            .overlay(
-         
-                VStack{
-               
+            VStack {
+                ScrollView {
                     HeaderView()
-       
-                    Spacer()
-                    
-                    
-                  
                     VStack {
-                        
-                        MenuView()
+                        MenuView() // doesnt show on preview
+                    }.frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .bottom)
+                        .border(.red)
+                        .padding([.top], 30)
                     
-                    }
-                    
-                  
                 
-               
-                })
-                
+            }
+            
+            
+            
+        }.frame(maxWidth: .infinity,maxHeight: .infinity)
+            .background(Color("Background"))
+            .border(.red)
+            .navigationBarHidden(true)
     }
 }
 
-struct HomeScreen_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
     }
 }
-
 
