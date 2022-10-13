@@ -8,66 +8,11 @@
 import SwiftUI
 
 struct InsuranceView: View {
-    @State private var isMenuDisplayed = false
-   
-
     
     var body: some View {
-       
-        
-                
-            if isMenuDisplayed {
-                
-                    
-                    HStack (spacing: 75){
-                        MenuView()
-                            
-                           // .offset(y: 200)
-                        
-                    }
-                    
-                
-            }
-            if (isMenuDisplayed == false) {
-                VStack {
-                    Button(action:{
-                        isMenuDisplayed = true
-                        
-                    }) {
-                        Image(systemName: "sun.min.fill")
-                            .font(.largeTitle)
-                            .foregroundColor(Color("Background"))
-                            .frame(width:81.71, height:76.82)
-                            .background(Color("AccentColor"))
-                            .cornerRadius(10)
-                        
-                    }
-                    
-                    
-                }
-            }
-            if (isMenuDisplayed == true) {
-                VStack {
-                    Button(action:{
-                        isMenuDisplayed = false
-                        
-                    }) {
-                        Image(systemName: "sun.min.fill")
-                            .font(.largeTitle)
-                            .foregroundColor(Color("Background"))
-                            .frame(width:81.71, height:76.82)
-                            .background(Color("AccentColor"))
-                            .cornerRadius(10)
-                        
-                    }
-                    
-                    
-                }
-        }
-        
+        Text("Hello World")
     }
 }
-
 struct InsuranceView_Previews: PreviewProvider {
     static var previews: some View {
         InsuranceView()

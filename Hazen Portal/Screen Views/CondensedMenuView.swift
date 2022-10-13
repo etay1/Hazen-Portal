@@ -7,15 +7,12 @@
 
 import SwiftUI
 
-
-
-struct MenuView: View {
-    @State private var isshowingLogin = false
+struct CondensedMenuView: View {
     var body: some View {
         
         NavigationStack{
             
-            HStack(spacing:80) {
+            HStack(spacing:25) {
                 
                 VStack{
             
@@ -52,7 +49,7 @@ struct MenuView: View {
                 
     
             }
-            HStack(spacing:80) {
+            HStack(spacing:25) {
                 
                 VStack{
                     
@@ -72,7 +69,7 @@ struct MenuView: View {
                 }
                 VStack{
                     
-                        NavigationLink(destination: InsuranceView(), label: {
+                        NavigationLink(destination: Text("Hello world"), label: {
                             Image(systemName: "umbrella")
                                 .font(.largeTitle)
                                 .frame(width:81.71, height:76.82)
@@ -82,14 +79,14 @@ struct MenuView: View {
                             
                         })
                     
-                    Text("Insruance")
+                    Text("Insurance")
                         .font(.iconText)
                         .foregroundColor(Color("AccentColor"))
                 }
                 
     
             }
-            HStack(spacing:80) {
+            HStack(spacing:25) {
                 
                 VStack{
                 
@@ -126,7 +123,7 @@ struct MenuView: View {
                 
     
             }
-            HStack(spacing:80) {
+            HStack(spacing:25) {
                 
                 VStack{
                    
@@ -144,19 +141,15 @@ struct MenuView: View {
                         .font(.iconText)
                         .foregroundColor(Color("AccentColor"))
                 }
-                
                 VStack{
                     
-                    
-                    NavigationLink(destination: LoginView(), label: {
-                           
+                        NavigationLink(destination: AppointmentView(), label: {
                             Image(systemName: "arrow.backward.square")
                                 .font(.largeTitle)
                                 .frame(width:81.71, height:76.82)
                                 .background(Color("AccentColor"))
                                 .foregroundColor(Color("Background"))
                                 .cornerRadius(10)
-                            
                             
                         })
                     
@@ -177,9 +170,8 @@ struct MenuView: View {
     }
 }
 
-struct MenuView_Previews: PreviewProvider {
+struct MenuView2_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView()
+        CondensedMenuView()
     }
 }
-
