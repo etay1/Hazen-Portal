@@ -10,7 +10,7 @@ import SwiftUI
 struct InsuranceView: View {
     
     var body: some View {
-        Text("Hello World")
+        Text("Hello World!")
     }
 }
 struct InsuranceView_Previews: PreviewProvider {
