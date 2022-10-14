@@ -8,22 +8,34 @@
 import SwiftUI
 
 struct HeaderView: View {
-
-    var body: some View {
-                 
-        Image("header-logo")
-         //   .offset(y:-65)
-        Text("MyHazen")
-           // .offset(y:-65)
-                        
-    }
+    @State private var menuShowing = false
     
+    
+    var body: some View {
+        
+        Image("header-logo")
+        Text("MyHazen")
+        
+       /* if (menuShowing == false) {
+            
+            
+            Button {
+                menuShowing = true
+            } label: {
+                
+                Image(systemName: "arrow.right")
+                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .topLeading)
+                    .padding([.leading], 15)
+            }
+            
+        }*/
+        
+    }
 }
             
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
         HeaderView()
-            .previewLayout(.fixed(width:375, height: 80))
     }
 }

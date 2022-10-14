@@ -238,7 +238,7 @@ struct AppointmentView: View {
                                     .blur(radius: 5) // blurs screen
                                     .disabled(true) // makes screen non interactable
                                 
-                                CondensedMenuView()
+                                MenuView(size:30)
                                     .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .center)
                                       //  .border(.red)
                                         .padding([.top], -200)
