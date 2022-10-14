@@ -10,23 +10,32 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         
+        VStack {
+        
             VStack {
-                ScrollView {
-                    HeaderView()
-                    VStack {
-                        MenuView() // doesnt show on preview
-                    }.frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .bottom)
-                        .border(.red)
-                        .padding([.top], 30)
-                    
+                Image("header-logo")
                 
-            }
+                Text("MyHazen")
+
+            }.frame(maxWidth: .infinity, alignment: .top)
+              //  .border(.red)
+        
+            MenuView(size:80)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+               // .border(.red)
+                
+            
+                
+            
+            
+            
+            
             
             
             
         }.frame(maxWidth: .infinity,maxHeight: .infinity)
             .background(Color("Background"))
-            .border(.red)
+           // .border(.red)
             .navigationBarHidden(true)
     }
 }

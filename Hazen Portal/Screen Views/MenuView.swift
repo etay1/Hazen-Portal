@@ -11,11 +11,14 @@ import SwiftUI
 
 struct MenuView: View {
     @State private var isshowingLogin = false
+    
+    var size: CGFloat
+    
     var body: some View {
         
         NavigationStack{
             
-            HStack(spacing:80) {
+            HStack(spacing:size) {
                 
                 VStack{
             
@@ -52,7 +55,7 @@ struct MenuView: View {
                 
     
             }
-            HStack(spacing:80) {
+            HStack(spacing:size) {
                 
                 VStack{
                     
@@ -89,7 +92,7 @@ struct MenuView: View {
                 
     
             }
-            HStack(spacing:80) {
+            HStack(spacing:size) {
                 
                 VStack{
                 
@@ -126,7 +129,7 @@ struct MenuView: View {
                 
     
             }
-            HStack(spacing:80) {
+            HStack(spacing:size) {
                 
                 VStack{
                    
@@ -179,7 +182,7 @@ struct MenuView: View {
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView()
+        MenuView(size:80)
     }
 }
 
