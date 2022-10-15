@@ -10,6 +10,7 @@ import SwiftUI
 struct InsuranceView: View {
     
     var body: some View {
+        HeaderView()
         Text("Hello World!")
     }
 }

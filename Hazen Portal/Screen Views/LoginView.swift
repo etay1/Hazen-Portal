@@ -1,10 +1,3 @@
-//
-//  LoginScreen.swift
-//  Hazen Portal
-//
-//  Created by Corey Bright on 9/29/22.
-//
-
 import Foundation
 import SwiftUI
 

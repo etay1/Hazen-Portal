@@ -15,8 +15,7 @@ struct HeaderView: View {
         
         Image("header-logo")
         Text("MyHazen")
-        
-       /* if (menuShowing == false) {
+        if (menuShowing == false) {
             
             
             Button {
@@ -27,9 +26,26 @@ struct HeaderView: View {
                     .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .topLeading)
                     .padding([.leading], 15)
             }
-            
-        }*/
+        }
         
+        else {
+            
+            VStack {
+                
+                Button {
+                    menuShowing = false
+                } label: {
+                    
+                    Image(systemName: "arrow.down")
+                        .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .topLeading)
+                        .padding([.leading], 15)
+                }
+                MenuView(size:30)
+                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .center)
+                      //  .border(.red)
+                    
+            }
+        }
     }
 }
             
