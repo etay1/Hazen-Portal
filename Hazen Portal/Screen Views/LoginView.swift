@@ -16,90 +16,107 @@ struct LoginView: View {
     @State private var wrongUsername = 0
     @State private var wrongPassword = 0
     @State private var showingLoginScreen = false
-  
-    
     var body: some View {
   
         ZStack{
             
             NavigationStack {
                 
-                ZStack {
-                    Color("Background")
-                        .edgesIgnoringSafeArea(.all)
+                VStack {
                     
                     VStack {
-                        
                         Image("img-logoM")
                         
                         Text("MyHazen")
                             .foregroundColor(.accentColor)
                             .font(.loginDetails)
                             .underline(color: .accentColor)
+                    }
+                    .padding(25)
+                    .frame(alignment: .top)
+                    .border(.red)
                         
-
+                    //---------------------------------------------
+                    
                         
-                        Text("Login")
-                            .font(.loginDetails)
-                            .foregroundColor(.accentColor)
-                            .padding()
+                    Text("Login")
+                        .font(.loginDetails)
+                        .background(Color.black.opacity(0.05))
+                        .border(.red)
+                
+                    //-------------------
+                    
+                    Group {
                         
                         TextField("NetId" + "@Brockport.edu", text: $username)
-                            .font(.loginPrompt)
-                            .foregroundColor(Color("AccentColor"))
                             .padding()
                             .frame(width:351, height: 65)
                             .background(Color.black.opacity(0.05))
-                       
-                            
-                        
-                        // default border color
                             .border(Color.accentColor, width:3)
-                        // border color for incorrect credentials
+                        
+                            // border color for incorrect credentials
                             .border(.red, width: CGFloat(wrongUsername))
                             .cornerRadius(7)
                             .autocorrectionDisabled(true)
                         
+                    //-------------------
+                        
                         SecureField("Password", text: $password)
-                            .font(.loginPrompt)
-                            .foregroundColor(Color("AccentColor"))
                             .padding()
                             .frame(width:351, height: 65)
                             .background(Color.black.opacity(0.05))
-                            
                         
-                        // default border color
+                            // default border color
                             .border(Color.accentColor, width:3)
-                        // border color for incorrect credentials
+                            // border color for incorrect credentials
                             .border(.red, width: CGFloat(wrongPassword))
                             .cornerRadius(7)
                             .autocorrectionDisabled(true)
                         
-                        Button("Login") {
-                            authenticateUser(username: username, password: password)
-                        }
-                        .foregroundColor(Color("Background"))
-                        .frame(width:351, height:65)
-                        .background(Color.accentColor)
-                        .cornerRadius(10)
+                    //-------------------
+                    
+                        Link("Forgot Password?",
+                             destination: URL(string: "https://bannerprod.brockport.edu/pls/prod/bwzkntid.PW_Entrypoint")!)
+                        .frame(maxWidth: 351, maxHeight: 21, alignment: .trailing)
+                        .border(.red)
                         
-                      
-                        .navigationDestination(isPresented: $showingLoginScreen) {
-                
-                            HomeView()
-                
-            
-                        }
+                    } //Group ends
+                    .font(.loginPrompt)
+                    
+                    //-------------------
+             
+                    Button("Login") {
+                        authenticateUser(username: username, password: password)
+                    }
+                    .foregroundColor(Color("Background"))
+                    .frame(width:351, height:65)
+                    .background(Color.accentColor)
+                    .cornerRadius(10)
+                    
+                    
+                    .navigationDestination(isPresented: $showingLoginScreen) {
+                        
+                        HomeView()
                         
                         
                     }
                     
+                    //------------------------------------------------------
+                    
+                    
                 }
+                //.border(.red)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color("Background"))
+                .foregroundColor(.accentColor)
                 
+               
             }
             .navigationBarHidden(true)
             
         }
+        //this border does it for every page
+        //.border(.red)
        
     }
     
