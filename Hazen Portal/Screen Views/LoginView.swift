@@ -85,23 +85,26 @@ struct LoginView: View {
                     
                     //-------------------
              
-                    Button("Login") {
+                    Button(action: {
                         authenticateUser(username: username, password: password)
+                        
+                    }) {
+                        Text("Login")
+                            .foregroundColor(Color("Background"))
+                            .frame(width:351, height:65)
+                            .background(Color.accentColor)
+                            .cornerRadius(10)
+                            .padding([.top], 20)
+                        
                     }
-                    .foregroundColor(Color("Background"))
-                    .frame(width:351, height:65)
-                    .background(Color.accentColor)
-                    .cornerRadius(10)
                     
                     
                     .navigationDestination(isPresented: $showingLoginScreen) {
-                        
                         HomeView()
-                        
-                        
+            
                     }
                     
-                    //------------------------------------------------------
+                    //---------------------------------------------
                     
                     
                 }
