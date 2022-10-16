@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct HeaderView: View {
-    @State private var menuShowing = false
+    
+    // value can be accessed by other views
+    @Binding var menuShowing: Bool
     
     
     var body: some View {
@@ -16,26 +18,35 @@ struct HeaderView: View {
         Image("header-logo")
         Text("MyHazen")
         
-       /* if (menuShowing == false) {
+        
+        Button {
+            menuShowing.toggle()
             
-            
-            Button {
-                menuShowing = true
-            } label: {
-                
+        } label: {
+            if(menuShowing){
+                Image(systemName: "arrow.down")
+                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .topLeading)
+                    .padding([.leading], 15)
+            }
+            else {
                 Image(systemName: "arrow.right")
                     .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .topLeading)
                     .padding([.leading], 15)
             }
-            
-        }*/
+        }
         
     }
 }
             
 
-struct HeaderView_Previews: PreviewProvider {
+struct HeaderView_PreviewsTrue: PreviewProvider {
     static var previews: some View {
-        HeaderView()
+        HeaderView(menuShowing: .constant(true))
+    }
+}
+
+struct HeaderView_PreviewsFalse: PreviewProvider {
+    static var previews: some View {
+        HeaderView(menuShowing: .constant(false))
     }
 }

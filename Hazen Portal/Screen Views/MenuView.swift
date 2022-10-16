@@ -11,6 +11,7 @@ import SwiftUI
 
 struct MenuView: View {
     @State private var isshowingLogin = false
+    @Binding var menuShowing : Bool
     
     var size: CGFloat
     
@@ -182,7 +183,7 @@ struct MenuView: View {
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView(size:80)
+        MenuView(menuShowing: .constant(false), size:80)
     }
 }
 

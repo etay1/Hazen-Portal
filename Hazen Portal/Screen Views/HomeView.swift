@@ -20,7 +20,7 @@ struct HomeView: View {
             }.frame(maxWidth: .infinity, alignment: .top)
               //  .border(.red)
         
-            MenuView(size:80)
+            MenuView(menuShowing: .constant(false), size:80)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                // .border(.red)
                 
