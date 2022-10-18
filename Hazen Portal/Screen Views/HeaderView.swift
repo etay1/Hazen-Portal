@@ -16,24 +16,36 @@ struct HeaderView: View {
     var body: some View {
         
         Image("header-logo")
-        Text("MyHazen")
         
-        
-        Button {
-            menuShowing.toggle()
+        HStack {
             
-        } label: {
-            if(menuShowing){
-                Image(systemName: "arrow.down")
-                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .topLeading)
-                    .padding([.leading], 15)
+            Button {
+                menuShowing.toggle()
+                
+            } label: {
+                if(menuShowing){
+                        Image(systemName: "arrow.down")
+                            .border(.red)
+                    
+                    
+                }
+                else {
+                        Image(systemName: "arrow.right")
+                            .border(.red)
+                }
+                
             }
-            else {
-                Image(systemName: "arrow.right")
-                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .topLeading)
-                    .padding([.leading], 15)
-            }
+            
+            
+            Text("MyHazen")
+            
+            
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        .border(.red)
+        
+        
+        
         
     }
 }
@@ -50,3 +62,5 @@ struct HeaderView_PreviewsFalse: PreviewProvider {
         HeaderView(menuShowing: .constant(false))
     }
 }
+
+
