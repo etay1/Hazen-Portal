@@ -124,9 +124,9 @@ struct AppointmentView: View {
                            
                         if(menuShowing) {
                             MenuView(menuShowing: $menuShowing, size: 40)
-                                .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .top)
+                                .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .center)
                             //  .border(.red)
-                                .padding([.top], -200)
+                                 
                             
                         }
                     
