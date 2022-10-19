@@ -22,9 +22,8 @@ struct AppointmentView: View {
             
             
                 VStack {
+                    HeaderView(menuShowing: $menuShowing)
                     ScrollView {
-                        
-                        HeaderView(menuShowing: $menuShowing)
 
                             Group {
                                 Text("Create an appointment")

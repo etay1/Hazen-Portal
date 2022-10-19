@@ -17,7 +17,7 @@ struct HeaderView: View {
         
         Image("header-logo")
         
-        HStack {
+        ZStack {
             
             Button {
                 menuShowing.toggle()
@@ -25,24 +25,26 @@ struct HeaderView: View {
             } label: {
                 if(menuShowing){
                         Image(systemName: "arrow.down")
-                            .border(.red)
-                    
-                    
+                            //.border(.red)
+       
                 }
                 else {
                         Image(systemName: "arrow.right")
-                            .border(.red)
+                            //.border(.red)
                 }
                 
-            }
+            }.padding([.leading], 15)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
             
             
             Text("MyHazen")
+                .font(.loginPrompt)
+                .foregroundColor(Color.accentColor)
             
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-        .border(.red)
+        //.border(.red)
         
         
         

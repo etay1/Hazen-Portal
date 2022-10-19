@@ -34,15 +34,15 @@ struct LoginView: View {
                     }
                     .padding(25)
                     .frame(alignment: .top)
-                    .border(.red)
+                    //.border(.red)
                         
                     //---------------------------------------------
                     
                         
                     Text("Login")
                         .font(.loginDetails)
-                        .background(Color.black.opacity(0.05))
-                        .border(.red)
+                      
+                        //.border(.red)
                 
                     //-------------------
                     
@@ -78,7 +78,7 @@ struct LoginView: View {
                         Link("Forgot Password?",
                              destination: URL(string: "https://bannerprod.brockport.edu/pls/prod/bwzkntid.PW_Entrypoint")!)
                         .frame(maxWidth: 351, maxHeight: 21, alignment: .trailing)
-                        .border(.red)
+                      //  .border(.red)
                         
                     } //Group ends
                     .font(.loginPrompt)

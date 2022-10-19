@@ -86,7 +86,7 @@ struct MenuView: View {
                             
                         })
                     
-                    Text("Insruance")
+                    Text("Insurance")
                         .font(.iconText)
                         .foregroundColor(Color("AccentColor"))
                 }
