@@ -135,7 +135,7 @@ struct AppointmentView: View {
                 
             } .frame(maxWidth: .infinity,maxHeight: .infinity)
                 .background(Color("Background"))
-                
+                .navigationBarHidden(true)
                 
              //   .border(.red)
             

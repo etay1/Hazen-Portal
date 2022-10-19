@@ -43,7 +43,7 @@ struct HeaderView: View {
             
             
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        .frame(maxWidth: .infinity, maxHeight: 40, alignment: .center)
         //.border(.red)
         
         
