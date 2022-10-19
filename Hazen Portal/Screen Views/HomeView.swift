@@ -16,8 +16,10 @@ struct HomeView: View {
                 Image("header-logo")
                 
                 Text("MyHazen")
+                    .font(.loginPrompt)
+                    .foregroundColor(Color.accentColor)
 
-            }.frame(maxWidth: .infinity, alignment: .top)
+            }.frame(maxWidth: .infinity,maxHeight: 40, alignment: .top)
               //  .border(.red)
         
             MenuView(menuShowing: .constant(false), size:80)
