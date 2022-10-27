@@ -76,7 +76,7 @@ struct MenuView: View {
                 }
                 VStack{
                     
-                        NavigationLink(destination: InsuranceView(), label: {
+                        NavigationLink(destination: SettingsView(), label: {
                             Image(systemName: "umbrella")
                                 .font(.largeTitle)
                                 .frame(width:81.71, height:76.82)

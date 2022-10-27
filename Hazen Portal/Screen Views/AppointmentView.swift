@@ -10,11 +10,16 @@ import SwiftUI
 struct AppointmentView: View {
         @State private var locationPicked: String = "Select a location"
         @State private var reasonPicked: String = "Reason for visit"
+    
+        @State private var other = ""
         
         @State private var date = Date()
     
+    
         // gets menuShowing value from headerView
         @State private var menuShowing = false
+    
+
         
 
         
@@ -115,6 +120,9 @@ struct AppointmentView: View {
                                     
                                 }// every text menu  - group
                                 
+                                // other field -----------------------------
+       
+                            
                                 
                             } .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .topLeading)
                                 .border(.red)
