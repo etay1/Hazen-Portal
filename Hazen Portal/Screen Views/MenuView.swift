@@ -134,7 +134,7 @@ struct MenuView: View {
                 
                 VStack{
                    
-                        NavigationLink(destination: Text("Hello world"), label: {
+                        NavigationLink(destination: EducationView(), label: {
                             Image(systemName: "bell")
                                 .font(.largeTitle)
                                 .frame(width:81.71, height:76.82)
