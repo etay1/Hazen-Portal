@@ -144,7 +144,7 @@ struct MenuView: View {
                             
                         })
                     
-                    Text("Education")
+                    Text("Resources")
                         .font(.iconText)
                         .foregroundColor(Color("AccentColor"))
                 }
