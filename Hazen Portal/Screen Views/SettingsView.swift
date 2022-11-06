@@ -200,7 +200,8 @@ struct SettingsView: View {
                     .foregroundColor(.accentColor)
                     //.border(.red)
                 
-            }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+            } // S
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                // .border(.red)
                 .padding([.leading], 15)
                 .disabled(menuShowing ? true: false)
