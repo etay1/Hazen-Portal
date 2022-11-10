@@ -127,7 +127,6 @@ struct UploadView: View {
                         .cornerRadius(8)
                      
                         
-                        
                                 
                     // upload button will eventually be added
                     
@@ -140,6 +139,20 @@ struct UploadView: View {
                 
                 
             }// S
+            .frame(maxWidth: .infinity,maxHeight: .infinity)
+                .padding([.leading], 15)
+                .disabled(menuShowing ? true: false)
+                .blur(radius: menuShowing ? 5: 0)
+        
+
+           
+        if(menuShowing) {
+            MenuView(menuShowing: $menuShowing, size: 40)
+                .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .center)
+            //  .border(.red)
+                 
+            
+        }
             
             
         } // V0
