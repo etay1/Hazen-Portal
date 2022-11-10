@@ -28,17 +28,17 @@ struct AppointmentView: View {
         var body: some View {
             
             
-                VStack {
+                VStack { //V0
                     HeaderView(menuShowing: $menuShowing)
-                    ScrollView {
+                    ScrollView {//S1
 
-                            Group {
+                            Group { //G1
                                 Text("Create an appointment")
                                     .font(.myHazen)
                                     .foregroundColor(Color("AccentColor"))
                                     .padding([.bottom], 15)
                                 
-                                Group {
+                                Group { //G2
                                     
                                     //Text/Menu 1 ----
                                     
@@ -129,7 +129,8 @@ struct AppointmentView: View {
                                         .foregroundColor(Color("AccentColor"))
                                         .padding([.top], 15)
                                     
-                                } .frame(alignment: .leading)
+                                } //G2
+                                .frame(alignment: .leading)
                                 
                                 // Date Picker ----------------------
                                 
@@ -140,7 +141,7 @@ struct AppointmentView: View {
                                 //-------------------------
                                 
                                 VStack (alignment: .leading){ //V1
-                                    Group { //G1
+                                    Group { //G3
                                         Text("Use the instructions above to search for an available appointment time.These appointments are for non-lifethreatening concerns. If your symptoms or concerns worsen before your scheduled appointment, please call 585-395-2414. If this is a medical emergency, please call University Police at x2222 if on campus, or dial 911. If this is a mental health crisis, text the Crisis Text Line -- Need someone to talk to? Text “Got5U” to 741-741 Free, 24/7, Confidential text support.")
                                             .foregroundColor(.accentColor)
                                         //.border(.red)
@@ -156,45 +157,39 @@ struct AppointmentView: View {
                                             .underline()
                                 
                                         
-                                    } //G1
+                                    } //G3
                                     .multilineTextAlignment(.center)
                                     .padding([.bottom], 5)
-                                }
+                                    
+                                } //V1
                                 .padding([.leading], 15)
                                 .font(.headerText)
                                 
                                 //-------------------------
-                            
-                                
-                            
-                                
-                                //------------------------------------
-                            } .frame(maxWidth: .infinity,maxHeight: .infinity)
-                                     /*,alignment: .topLeading*/
-                               // .border(.red)
-                                .padding([.leading], 15)
-                                .disabled(menuShowing ? true: false)
-                                .blur(radius: menuShowing ? 5: 0)
-                        
-                
+              
+                            } //G1
+                            .frame(maxWidth: .infinity,maxHeight: .infinity)
                            
-                        if(menuShowing) {
-                            MenuView(menuShowing: $menuShowing, size: 40)
-                                .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .center)
-                            //  .border(.red)
-                                 
-                            
-                        }
+                
+                
                     
+                }//S
+                        .frame(maxWidth: .infinity,maxHeight: .infinity)
+                        .padding([.leading], 15)
+                        .disabled(menuShowing ? true: false)
+                        .blur(radius: menuShowing ? 5: 0)
+                
+       
+                if(menuShowing) {
+                    MenuView(menuShowing: $menuShowing, size: 40)
+                        .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .center)
                 }
-               // .border(.red)
+    
                 
             } .frame(maxWidth: .infinity,maxHeight: .infinity)
                 .background(Color("Background"))
                 .navigationBarHidden(true)
-                
-             //   .border(.red)
-            
+ 
         }
 }
 /*
