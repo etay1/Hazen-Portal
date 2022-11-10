@@ -14,12 +14,14 @@ struct AppointmentView: View {
         @State private var other = ""
         
         @State private var date = Date()
+        
+    
     
     
         // gets menuShowing value from headerView
         @State private var menuShowing = false
     
-
+    
         
 
         

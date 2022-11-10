@@ -39,7 +39,7 @@ struct MenuView: View {
                 }
                 VStack{
                   
-                        NavigationLink(destination: Text("Hello world"), label: {
+                        NavigationLink(destination: UploadView(), label: {
                             Image(systemName: "arrow.up.doc")
                                 .font(.largeTitle)
                                 .frame(width:81.71, height:76.82)

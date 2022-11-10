@@ -10,7 +10,18 @@ import SwiftUI
 struct UploadView: View {
     @State private var menuShowing = false
     @State private var bulletPoint = "\u{2022}"
-    @State private var documentName = ""
+    @State private var documentName = "Pick a document"
+    
+    @State private var selectedDocument = "select a document"
+    @State private var isExpanded = false
+ 
+    let documentType = ["Athlete Physical", "Clearance Letter For Athletes", "Consent For Release Of Records", "COVID 19 Medical Exemption Letter", "COVID 19 Religious Exemption Letter", "COVID Test Results", "COVID Vaccine Records", "Documentation For Food Accomodations", "HC-Consent For Treatment Of Minors", "Immunization Records", "Medical Information Requested By Health Center", "Paired Organ Waiver", "Sickle Cell Results Submitted Athlete"]
+    
+    let documentType2 = ["item 1", "item 3", "item 3"]
+    
+    // choices of documents to upload
+    
+
     var body: some View {
         VStack { // V0
             HeaderView(menuShowing: $menuShowing)
@@ -52,6 +63,7 @@ struct UploadView: View {
                 } // V1
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding([.leading,.trailing], 15)
+                .foregroundColor(Color.accentColor)
                 
                 
                 VStack (alignment: .leading){ // V4
@@ -81,24 +93,53 @@ struct UploadView: View {
                 } // V4
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 .padding([.leading,.trailing,.top], 15)
+                .foregroundColor(Color.accentColor)
                 
-                VStack (alignment: .leading) { // V5
+                VStack (alignment: .leading, spacing: 5) { // V5
+                
                     Text("Choose document you are uploading:")
-                    // drop down menu with eventually be added
+                    Menu {
+                        
+                        Picker(selection: $selectedDocument, label: EmptyView()){
+                            
+                            
+                            ForEach(documentType, id: \.self) {
+                                Text("\($0)")
+                            }
+                            
+                        }
+                        .tint(Color("Background"))
                     
+                        .background(Color("AccentColor"))
+                    } label: {
+                      
+             
+                           Label (title: {Text("\(selectedDocument)").font(.loginPrompt) },
+                                   icon: {Image(systemName: "chevron.right")}
+                            )
+                           
+                         
+                    }.fixedSize(horizontal: true, vertical: false)
+                        .frame(height: 40)
+                        .padding([.leading,.trailing], 10)
+                        .foregroundColor(Color("Background"))
+                        .background(Color("AccentColor"))
+                        .cornerRadius(8)
+                     
+                        
+                        
+                                
                     // upload button will eventually be added
                     
                     
                 } // V5
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 .padding([.leading,.trailing,.top], 15)
+                .foregroundColor(Color.accentColor)
             
                 
-
-             
                 
-                
-            } // S
+            }// S
             
             
         } // V0
@@ -108,6 +149,23 @@ struct UploadView: View {
         
         
     }
+    var customLabel: some View {
+        HStack {
+           // Image(systemName: "paperplane")
+            Text(String(selectedDocument))
+            Spacer()
+            Text("⌵")
+                .offset(y: -4)
+                .foregroundColor(Color("Background"))
+        }
+        
+        .foregroundColor(.white)
+        .font(.title)
+        .padding()
+        .frame(height: 32)
+        .background(Color.accentColor)
+        .cornerRadius(16)
+    }
 }
 
 struct UploadView_Previews: PreviewProvider {
@@ -116,6 +174,9 @@ struct UploadView_Previews: PreviewProvider {
     }
 }
 
+
+    
+    
 // gives bg color to group box
 struct ColoredGroupBox: GroupBoxStyle {
     func makeBody(configuration: Configuration) -> some View {
@@ -131,9 +192,35 @@ struct ColoredGroupBox: GroupBoxStyle {
         .padding()
         .background(RoundedRectangle(cornerRadius: 8, style: .continuous)
             .fill(Color("Background"))) // Set your color here!!
-        .border(.black)
+        .border(Color("AccentColor"))
+        
     }
 }
+
+
+
+// gives bg color to group box
+struct ColoredGroupBox2: GroupBoxStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        VStack {
+            HStack {
+                configuration.label
+                    .font(.headline)
+               // Spacer()
+            }
+            
+            configuration.content
+        }
+        .padding()
+        .background(RoundedRectangle(cornerRadius: 8, style: .continuous)
+            .fill(Color("AccentColor"))) // Set your color here!!
+        //.border(.black)
+        .foregroundColor(Color("Background"))
+        .tint(Color("Background"))
+        
+    }
+}
+
 
 
 
