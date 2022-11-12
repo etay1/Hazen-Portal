@@ -13,6 +13,7 @@ struct UploadView: View {
     @State private var documentName = "Pick a document"
     
     @State private var selectedDocument = "select a document"
+
     @State private var isExpanded = false
  
     let documentType = ["Athlete Physical", "Clearance Letter For Athletes", "Consent For Release Of Records", "COVID 19 Medical Exemption Letter", "COVID 19 Religious Exemption Letter", "COVID Test Results", "COVID Vaccine Records", "Documentation For Food Accomodations", "HC-Consent For Treatment Of Minors", "Immunization Records", "Medical Information Requested By Health Center", "Paired Organ Waiver", "Sickle Cell Results Submitted Athlete"]
@@ -22,6 +23,8 @@ struct UploadView: View {
     // choices of documents to upload
     
 
+   
+    
     var body: some View {
         VStack { // V0
             HeaderView(menuShowing: $menuShowing)
@@ -96,7 +99,7 @@ struct UploadView: View {
                 .foregroundColor(Color.accentColor)
                 
                 VStack (alignment: .leading, spacing: 5) { // V5
-                
+                    
                     Text("Choose document you are uploading:")
                     Menu {
                         
@@ -109,24 +112,25 @@ struct UploadView: View {
                             
                         }
                         .tint(Color("Background"))
-                    
+                        
                         .background(Color("AccentColor"))
                     } label: {
-                      
-             
-                           Label (title: {Text("\(selectedDocument)").font(.loginPrompt) },
-                                   icon: {Image(systemName: "chevron.right")}
-                            )
-                           
-                         
-                    }.fixedSize(horizontal: true, vertical: false)
+                        CustomLabel(text: selectedDocument)
+                        
+                        
+                    }.fixedSize(horizontal: true, vertical: false) //  makes box adjust depending on how long the text is
                         .frame(height: 40)
                         .padding([.leading,.trailing], 10)
                         .foregroundColor(Color("Background"))
                         .background(Color("AccentColor"))
                         .cornerRadius(8)
-                     
-                        
+                    
+              
+                 
+               
+
+                    
+                    
                                 
                     // upload button will eventually be added
                     
@@ -146,13 +150,13 @@ struct UploadView: View {
         
 
            
-        if(menuShowing) {
-            MenuView(menuShowing: $menuShowing, size: 40)
-                .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .center)
+            if(menuShowing) {
+                MenuView(menuShowing: $menuShowing, size: 40)
+                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .center)
             //  .border(.red)
                  
             
-        }
+            }
             
             
         } // V0
@@ -160,24 +164,20 @@ struct UploadView: View {
         .background(Color("Background"))
         .navigationBarBackButtonHidden()
         
-        
     }
-    var customLabel: some View {
-        HStack {
-           // Image(systemName: "paperplane")
-            Text(String(selectedDocument))
-            Spacer()
-            Text("⌵")
-                .offset(y: -4)
-                .foregroundColor(Color("Background"))
-        }
+}
+
+
+
+
+struct CustomLabel: View {
+    var text: String
+    var body: some View {
         
-        .foregroundColor(.white)
-        .font(.title)
-        .padding()
-        .frame(height: 32)
-        .background(Color.accentColor)
-        .cornerRadius(16)
+        Label (title: {Text("\(text)").font(.loginPrompt) },
+          icon: {Image(systemName: "chevron.right")})
+       
+            
     }
 }
 
@@ -188,8 +188,6 @@ struct UploadView_Previews: PreviewProvider {
 }
 
 
-    
-    
 // gives bg color to group box
 struct ColoredGroupBox: GroupBoxStyle {
     func makeBody(configuration: Configuration) -> some View {
@@ -212,32 +210,6 @@ struct ColoredGroupBox: GroupBoxStyle {
 
 
 
-// gives bg color to group box
-struct ColoredGroupBox2: GroupBoxStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        VStack {
-            HStack {
-                configuration.label
-                    .font(.headline)
-               // Spacer()
-            }
-            
-            configuration.content
-        }
-        .padding()
-        .background(RoundedRectangle(cornerRadius: 8, style: .continuous)
-            .fill(Color("AccentColor"))) // Set your color here!!
-        //.border(.black)
-        .foregroundColor(Color("Background"))
-        .tint(Color("Background"))
-        
-    }
-}
-
-
-
-
-
 struct BulletPointView: View {
     var text: String
     var body: some View {
@@ -248,10 +220,5 @@ struct BulletPointView: View {
     }
 }
 
-func BulletPointView2 (text: String) -> some View {
-    return(Text("\u{2022}\(text)"))
-        .padding([.leading], 15)
-    
-}
 
 
