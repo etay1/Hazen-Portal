@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EducationView: View {
+struct ResourcesView: View {
     @State private var menuShowing = false
     
     var body: some View {
@@ -255,9 +255,9 @@ struct EducationView: View {
     }
 }
 
-struct EducationView_Previews: PreviewProvider {
+struct ResourcesView_Previews: PreviewProvider {
     static var previews: some View {
-        EducationView()
+        ResourcesView()
     }
 }
 
