@@ -13,6 +13,9 @@ struct UploadView: View {
     @State private var documentName = "Pick a document"
     
     @State private var selectedDocument = "select a document"
+    @State private var userDocument = ""
+    
+    @State private var isVerified = false
 
     @State private var isExpanded = false
  
@@ -125,14 +128,22 @@ struct UploadView: View {
                         .background(Color("AccentColor"))
                         .cornerRadius(8)
                     
-              
-                 
-               
-
+                    switch selectedDocument {
+                    case "Athlete Physical" :
+                        Text("This is required for New/New Transfer NCAA athletes. Please only submit your physical here. DO NOT USE THIS TITLE TO SEND OTHER DOCUMENTS.")
+                            .bold()
+                        if isVerified == false {
+                            UploadButton(boxText: "Select File", outsideBox: "", isVerified: $isVerified,userDocument: $userDocument)
+                        }
+                        else {
+                            UploadButton(boxText: "Change", outsideBox: userDocument , isVerified: $isVerified, userDocument: $userDocument)
+                            SubmitButton(document: $selectedDocument)
+                        }
+                    default:
+                        EmptyView()
+                    }
                     
-                    
-                                
-                    // upload button will eventually be added
+   
                     
                     
                 } // V5
@@ -167,6 +178,79 @@ struct UploadView: View {
     }
 }
 
+struct SubmitButton : View {
+
+    @Binding var document : String
+    
+    var body: some View {
+        Button(action: {
+            
+            
+            // will eventually implement a function that uploads the file to db
+            
+            // will implement a fucntion that completely resets view
+            
+            
+            
+        }) {
+            
+            
+            Text("Submit")
+                .foregroundColor(Color("Background"))
+                .frame(width:75, height:40)
+                .background(Color.accentColor)
+               // .cornerRadius(10)
+            
+        }
+        
+    }
+}
+
+struct UploadButton: View {
+    var boxText : String
+    var outsideBox : String
+    @Binding var isVerified : Bool
+    @Binding var userDocument : String
+    var body : some View {
+        HStack {
+            Button(action: {
+                // will eventually implement a function to allow the user to select an image from  their phone files
+                
+                // will eventually implement a function that validates the files selected
+                isVerified = true
+                
+                // if document is verfied it will return the document to the main view
+                
+                // if doc is verified its returns the string of doc
+                if isVerified {
+                    userDocument = "someDoc.pdf"
+                }
+                
+                
+            }) {
+                Text(boxText)
+                    .foregroundColor(Color("Background"))
+                    .fixedSize()
+                    .frame(height:40)
+                    .padding([.leading,.trailing], 10)
+                    .background(Color.accentColor)
+                    .cornerRadius(10)
+                
+                Text(outsideBox) // shows selected file
+                
+                if isVerified {
+                    Button(action: {
+                        isVerified = false
+                        userDocument = ""
+                    }) {
+                        Image(systemName: "x.circle")
+                    }
+                    
+                }
+            }
+        }
+    }
+}
 
 
 
