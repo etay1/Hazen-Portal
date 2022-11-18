@@ -17,38 +17,40 @@ struct ResourcesView: View {
             ScrollView { //S
                 
               
-                
-                
-                VStack (alignment: .leading){ //V1
-                    Group { //G1
-                        Text("Welcome to My-Hazen your patient portal for the Counseling, Health and Sports Medicine Clinic")
-                            .foregroundColor(.accentColor)
-                        //.border(.red)
-                        
-                        Text("CRISIS TEXT LINE --- NEED SOMEONE TO TALK TO? Text \"Got5U\" to 741-741-Free, 24/7, Confidential text support.")
-                        // .border(.red)
-                        
-                        Text("If you have a non-urgent medical or psychiatric concern, call 585-395-2414 and press option 1 for the Nurse Advice line. These nurses do NOT have access to you records and are unable to provice prescription refills, test results or make appointments.")
-                        // .border(.red)
-                        
-                        Text("For emergencies during this time, please call 911 or University Police at 585-395-2222")
-                        // .border(.red)
-                    } //G1
-                    .multilineTextAlignment(.center)
-                    .padding([.bottom], 5)
+                VStack { //Outer Box
                     
+                    VStack (alignment:.leading){ //V1
+                        Group { //G1
+                            Text("Welcome to My-Hazen your patient portal for the Counseling, Health and Sports Medicine Clinic")
+                                .foregroundColor((Color("Background")))
+                             
                     
-                }//V1
-                
-                .padding([.leading], 15)
-                
-                .font(.headerText)
-                .foregroundColor(.red)
-                //.border(.red)
+                            Text("CRISIS TEXT LINE --- NEED SOMEONE TO TALK TO? Text \"Got5U\" to 741-741-Free, 24/7, Confidential text support.")
+                            
+                            Text("If you have a non-urgent medical or psychiatric concern, call 585-395-2414 and press option 1 for the Nurse Advice line. These nurses do NOT have access to you records and are unable to provice prescription refills, test results or make appointments.")
+                            
+                            Text("For emergencies during this time, please call 911 or University Police at 585-395-2222")
+                          
+                        } //G1
+                        .padding([.bottom], 5)
+                      //  .padding([.leading,.trailing], 10)
+                        
+                    }//V1
+                    .font(.headerText)
+                    .foregroundColor(.red)
+                    .padding([.leading,.trailing], 10)
+                    .background(.white)
+
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .border(Color("AccentColor"))
+                    
+                }// V Outer
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding([.leading,.trailing, .top, .bottom], 15)
+                .foregroundColor(Color.accentColor)
                 
                 Divider()
-                
-                
+               
                 VStack (alignment:.leading){ //V2
                     
                     LinkBox(text: "Active Listening", link:"https://brockport.medicatconnect.com/form/active-listening.pdf" )
@@ -81,7 +83,7 @@ struct ResourcesView: View {
                     TextBox(text: "Boundaries should be based on your values, or the things that are important to you.")
                     
                 } //V2
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth: .infinity,maxHeight:.infinity, alignment: .leading)
                 .padding([.leading], 15)
                 //.border(.red)
                 
@@ -118,7 +120,7 @@ struct ResourcesView: View {
                     TextBox(text: "Emotions can be hard to describe at times. Here is a list of some basic emotions we experience.")
                     
                 } //V3
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth: .infinity,maxHeight:.infinity, alignment: .leading)
                 .padding([.leading], 15)
                 //.border(.red)
                 
@@ -153,7 +155,7 @@ struct ResourcesView: View {
                     
                     
                 }//V4
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth: .infinity,maxHeight:.infinity, alignment: .leading)
                 .padding([.leading], 15)
                 //.border(.red)
                 
@@ -192,7 +194,7 @@ struct ResourcesView: View {
                     
                     
                 }//V5
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth: .infinity,maxHeight:.infinity, alignment: .leading)
                 .padding([.leading], 15)
                 //.border(.red)
                 
@@ -224,7 +226,7 @@ struct ResourcesView: View {
                     TextBox(text: "Tips to better manage your time.")
                     
                 }//V6
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth: .infinity,maxHeight:.infinity, alignment: .leading)
                 .padding([.leading], 15)
                 //.border(.red)
          
@@ -269,16 +271,18 @@ func LinkBox(text: String, link: String) -> some View {
     Link(destination: URL(string: link)!, label: {
         Text(text)
             .underline()
-    })
+    }) .padding([.bottom], 10)
     
 }
 
 func TextBox(text: String) -> some View {
     Text(text)
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-       // .border(.red)
+        .multilineTextAlignment(.leading)
+        .frame(width: .infinity, height: .infinity, alignment: .leading)
+        //.border(.red)
         .foregroundColor(.accentColor)
         .font(.iconText)
+        .padding([.bottom], 10)
     
 }
 
