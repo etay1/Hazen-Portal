@@ -63,8 +63,9 @@ struct UploadView: View {
                             BulletPointView(text: "Unable to scan and upload forms, fax forms to 585-395-2559.")
                         } // V3
     
-                    } // GB
-                    .groupBoxStyle(ColoredGroupBox())
+                    }.background(Color("BackgroudColor"))
+                    // GB
+                        .groupBoxStyle(ColoredGroupBox())
             
                     
                 } // V1
@@ -297,6 +298,7 @@ struct ColoredGroupBox: GroupBoxStyle {
         .background(RoundedRectangle(cornerRadius: 8, style: .continuous)
             .fill(Color("Background"))) // Set your color here!!
         .border(Color("AccentColor"))
+       // .cornerRadius(5)
         
     }
 }
