@@ -18,6 +18,7 @@ struct UploadView: View {
     @State private var isVerified = false
 
     @State private var isExpanded = false
+    @State private var isSubmited = false
  
     let documentType = ["Athlete Physical", "Clearance Letter For Athletes", "Consent For Release Of Records", "COVID 19 Medical Exemption Letter", "COVID 19 Religious Exemption Letter", "COVID Test Results", "COVID Vaccine Records", "Documentation For Food Accomodations", "HC-Consent For Treatment Of Minors", "Immunization Records", "Medical Information Requested By Health Center", "Paired Organ Waiver", "Sickle Cell Results Submitted Athlete"]
     
@@ -62,14 +63,17 @@ struct UploadView: View {
                             BulletPointView(text: "Unable to scan and upload forms, fax forms to 585-395-2559.")
                         } // V3
     
-                    } // GB
-                    .groupBoxStyle(ColoredGroupBox())
+                    }.background(Color("BackgroudColor"))
+                    // GB
+                        .groupBoxStyle(ColoredGroupBox())
             
                     
                 } // V1
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 .padding([.leading,.trailing], 15)
                 .foregroundColor(Color.accentColor)
+                
+                //.border(.red)
                 
                 
                 VStack (alignment: .leading){ // V4
@@ -128,20 +132,23 @@ struct UploadView: View {
                         .background(Color("AccentColor"))
                         .cornerRadius(8)
                     
-                    switch selectedDocument {
-                    case "Athlete Physical" :
-                        Text("This is required for New/New Transfer NCAA athletes. Please only submit your physical here. DO NOT USE THIS TITLE TO SEND OTHER DOCUMENTS.")
-                            .bold()
-                        if isVerified == false {
-                            UploadButton(boxText: "Select File", outsideBox: "", isVerified: $isVerified,userDocument: $userDocument)
+                    if !isSubmited {
+                        switch selectedDocument {
+                        case "Athlete Physical" :
+                            Text("This is required for New/New Transfer NCAA athletes. Please only submit your physical here. DO NOT USE THIS TITLE TO SEND OTHER DOCUMENTS.")
+                                .bold()
+                            if isVerified == false {
+                                UploadButton(boxText: "Select File", outsideBox: "", isVerified: $isVerified,userDocument: $userDocument)
+                            }
+                            else {
+                                UploadButton(boxText: "Change", outsideBox: userDocument , isVerified: $isVerified, userDocument: $userDocument)
+                                SubmitButton(isSubmmited: $isSubmited)
+                            }
+                        default:
+                            EmptyView()
                         }
-                        else {
-                            UploadButton(boxText: "Change", outsideBox: userDocument , isVerified: $isVerified, userDocument: $userDocument)
-                            SubmitButton(document: $selectedDocument)
-                        }
-                    default:
-                        EmptyView()
                     }
+                    
                     
    
                     
@@ -155,7 +162,7 @@ struct UploadView: View {
                 
             }// S
             .frame(maxWidth: .infinity,maxHeight: .infinity)
-                .padding([.leading], 15)
+            //.padding([.leading], 15)
                 .disabled(menuShowing ? true: false)
                 .blur(radius: menuShowing ? 5: 0)
         
@@ -180,7 +187,8 @@ struct UploadView: View {
 
 struct SubmitButton : View {
 
-    @Binding var document : String
+    //@Binding var document : String
+    @Binding var isSubmmited : Bool
     
     var body: some View {
         Button(action: {
@@ -190,6 +198,8 @@ struct SubmitButton : View {
             
             // will implement a fucntion that completely resets view
             
+            // if submission is sucessfull
+            isSubmmited = true
             
             
         }) {
@@ -288,6 +298,7 @@ struct ColoredGroupBox: GroupBoxStyle {
         .background(RoundedRectangle(cornerRadius: 8, style: .continuous)
             .fill(Color("Background"))) // Set your color here!!
         .border(Color("AccentColor"))
+       // .cornerRadius(5)
         
     }
 }
@@ -297,9 +308,13 @@ struct ColoredGroupBox: GroupBoxStyle {
 struct BulletPointView: View {
     var text: String
     var body: some View {
-            Text("\u{2022}\(text)")
-            .padding([.leading], 15)
+        HStack(alignment: .top) {
+            Text("\u{2022}")
+            Text(text)
             
+        }
+        .padding([.leading], 15)
+        
             
     }
 }
