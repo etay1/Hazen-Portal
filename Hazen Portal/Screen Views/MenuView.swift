@@ -76,7 +76,7 @@ struct MenuView: View {
                 }
                 VStack{
                     
-                        NavigationLink(destination: SettingsView(), label: {
+                        NavigationLink(destination: InsuranceView(), label: {
                             Image(systemName: "umbrella")
                                 .font(.largeTitle)
                                 .frame(width:81.71, height:76.82)
@@ -97,7 +97,7 @@ struct MenuView: View {
                 
                 VStack{
                 
-                        NavigationLink(destination: Text("Hello world"), label: {
+                        NavigationLink(destination: SettingsView(), label: {
                             Image(systemName: "list.clipboard")
                                 .font(.largeTitle)
                                 .frame(width:81.71, height:76.82)

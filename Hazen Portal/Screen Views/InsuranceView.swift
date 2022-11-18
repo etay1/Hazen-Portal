@@ -1,4 +1,4 @@
-//
+
 //  InsuranceView.swift
 //  Hazen Portal
 //
@@ -8,9 +8,231 @@
 import SwiftUI
 
 struct InsuranceView: View {
+    @State private var menuShowing = false
+
+    @State private var isAddExpanded = false
+    @State private var isSubmited = false
+    
+    @State private var insuranceCompany = ""
+    @State private var policyNumber = ""
+    @State private var groupNumber = ""
+    @State private var firstName = ""
+    @State private var lastName = ""
+    @State private var birthDate = ""
+    @State private var relationToSubscriber = ""
+    
+    
+    // choices of documents to upload
+    
+
+   
     
     var body: some View {
-        Text("Hello World!")
+        VStack (){ // V0
+            HeaderView(menuShowing: $menuShowing)
+            ScrollView { // S
+                
+                VStack (alignment: .leading, spacing: 10) { // V1
+                    Text("Insurance")
+                    Text("To enter you current Health Insurance information (This is MANDATORY FOR ATHELTES):")
+                    
+                } // V1
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                .padding([.leading,.trailing], 15)
+                .foregroundColor(Color.accentColor)
+                
+                //-------------------------------------------------------------
+                
+                
+                VStack (alignment: .leading) { // V2
+                    BulletPointView(text: "Save a copy of the front and back of your insurance card serperately on your phone.")
+                    
+                    Text("Card needs to be saved in one of the following formats: .gif, .png, .tiff, .jpeg.")
+                        .padding([.bottom,.trailing], 10)
+                        .padding(.leading, 40)
+                    Spacer(minLength: 0)
+                    BulletPointView(text: "Click \"Add New\" Button.")
+                    BulletPointView(text: "REQUIRED: You must enter the Insurance Commpany name and Policy number than click \"Add\" button.")
+                    BulletPointView(text: "Group # and Policy Holder information is optional.")
+                    BulletPointView(text: "Upload the front and back of your insurance card ONE AT A TIME OR YOU WILL GET AN ERROR MESSAGE - Use the \"Upload\" button labelled \"Front\" and \"Back\" at right of screen next to the information you entered.")
+                    
+                    
+                }// V2
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                .foregroundColor(Color.accentColor)
+                .padding([.leading],15)
+                .padding([.top,.trailing], 10)
+                
+                //-------------------------------------------------------------
+                
+                VStack(alignment: .leading) { // V3
+                    Button(action: {
+                        isAddExpanded.toggle()
+                    }) {
+                        Text("Add New")
+                            .frame(width:100, height:30)
+                            .background(Color.accentColor)
+                            .foregroundColor(Color("Background"))
+                            .cornerRadius(8)
+                    }
+                } // V3
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                .padding([.leading,.trailing], 15)
+                .foregroundColor(Color.accentColor)
+            
+                
+                //-------------------------------------------------------------
+                if (isAddExpanded && !isSubmited) { //IF
+                    VStack(alignment: .leading, spacing:10) { // V4
+            
+                            
+                            Text("New Insurance")
+                                .frame(maxWidth: .infinity, minHeight: 30, alignment: .leading)
+                                .padding(.leading, 15)
+                                .background(Color.accentColor)
+                                .foregroundColor(Color("Background"))
+                            
+                            
+                            
+                            TextAndTextField(text: "Insurance Company *", textFieldText: "Insurance Company", variable: $insuranceCompany)
+                            //  .padding([.top],10)
+                            
+                            TextAndTextField(text: "Policy Number *", textFieldText: "Policy Number", variable: $policyNumber)
+                            
+                            TextAndTextField(text: "Group Number", textFieldText: "Group Number", variable: $groupNumber)
+                            
+                            
+                            
+                            
+                        
+                    } // V4
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    .padding([.leading,.trailing], 15)
+                    .padding(.top, 10)
+                    .foregroundColor(Color.accentColor)
+                } // IF
+
+                //-------------------------------------------------------------
+                
+                if (isAddExpanded && !isSubmited) { // IF
+                    VStack (alignment: .leading, spacing:10) { // V5
+                            
+                        Text("Policy Holder Information")
+                            .frame(maxWidth: .infinity, minHeight: 30, alignment: .leading)
+                            .padding(.leading, 15)
+                            .background(Color.accentColor)
+                            .foregroundColor(Color("Background"))
+                        
+                        
+                        
+                        TextAndTextField(text: "First Name", textFieldText: "First Name", variable: $firstName)
+                        
+                        TextAndTextField(text: "Last Name", textFieldText: "Last Name", variable: $lastName)
+                        
+                        TextAndTextField(text: "Birth Date", textFieldText: "mm/dd/yyyy", variable: $birthDate)
+                        
+                        TextAndTextField(text: "Student Relationship to Subscriber", textFieldText: "Relationship", variable: $relationToSubscriber)
+                        
+                        SubmitButton(isSubmmited: $isSubmited)
+                        
+                        
+                    
+                        
+                        
+                        
+                    } // V5
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    .padding([.leading,.trailing,.top], 15)
+                    .foregroundColor(Color.accentColor)
+                } //IF
+                
+                
+                //-------------------------------------------------------------
+                VStack (alignment: .leading) { // V6
+                    Text("Insurance on FIle")
+                        .frame(maxWidth: .infinity, minHeight: 30, alignment: .leading)
+                        .padding(.leading, 15)
+                        .background(Color.accentColor)
+                        .foregroundColor(Color("Background"))
+                    
+                    
+                    
+                /*    GroupBox {
+                        HStack {
+                            Text("Empire Blue Cross and Blue Shield")
+            
+                            Text("Entered: 9/05/2021")
+                                .font(.iconText)
+                        }
+                        
+                       Spacer(minLength: 20)
+                        
+                        HStack{
+                            Text("Policy Number: ########")
+                            Text("Group Number: ########")
+                            
+                        }.font(.iconText)
+                        
+                        HStack {
+                            Text("Effectuve date of coverage: 5/13/2022")
+                            VStack (alignment: .leading) {
+                                Text("Upload Card")
+                                HStack {
+                                    Text("View Front")
+                                    Text("View Back")
+                                }
+                             
+                            }
+                                
+                        }.font(.iconText)
+                    }
+                    //.frame(alignment: .leading)
+                    .groupBoxStyle(ColoredGroupBox())
+                   */
+                    
+                } // V6
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                .padding([.leading,.trailing,.top], 15)
+                .foregroundColor(Color.accentColor)
+                
+                
+                /*
+                HStack {
+                    VStack {
+                        
+                        
+                    }
+                    VStack {
+                        
+                    }
+                }
+                    
+                            
+                */
+                 
+            
+            }// S
+            .frame(maxWidth: .infinity,maxHeight: .infinity)
+                //.padding([.leading], 15)
+                .disabled(menuShowing ? true: false)
+                .blur(radius: menuShowing ? 5: 0)
+        
+
+           
+            if(menuShowing) {
+                MenuView(menuShowing: $menuShowing, size: 40)
+                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .center)
+            //  .border(.red)
+                 
+            
+            }
+            
+            
+        } // V0
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color("Background"))
+        .navigationBarBackButtonHidden()
+        
     }
 }
 struct InsuranceView_Previews: PreviewProvider {
@@ -19,32 +241,18 @@ struct InsuranceView_Previews: PreviewProvider {
     }
 }
 
-/*
- HStack (spacing: 75) {
-     // FIRST ROW
-     ButtonCreation(icon: "calendar", iconName: "Appoitments",  y_offset: -115, destination: AppointmentsView() )
-         
-     ButtonCreation(icon: "ic-covid", iconName: "COVID-19",  y_offset: -115, destination:  AppointmentsView())
- }
- HStack (spacing: 75) {
-     // SECOND ROW
-     ButtonCreation(icon: "syringe", iconName: "Vaccinations",  y_offset: -115, destination: AppointmentsView())
-     
-     ButtonCreation(icon: "umbrella", iconName: "Insurance",  y_offset: -115, destination: AppointmentsView())
- }
- 
- // THIRD ROW
-
- HStack (spacing: 75) {
-     ButtonCreation(icon: "list.clipboard", iconName: "Forms",  y_offset: -115, destination: AppointmentsView())
-     ButtonCreation(icon: "envelope", iconName: "Messages",  y_offset: -115, destination: AppointmentsView())
- }
- 
- // FOURTH ROW
- HStack (spacing: 75) {
-     ButtonCreation(icon: "bell", iconName: "Education", y_offset: -115, destination: AppointmentsView())
-     ButtonCreation(icon: "arrow.up.square", iconName: "Upload", y_offset: -115, destination: AppointmentsView())
- }
-}
- 
- */
+struct TextAndTextField : View {
+    var text : String
+    var textFieldText: String
+    @Binding var variable: String
+    var body: some View {
+            
+        VStack (alignment: .leading, spacing: 2) {
+            Text(text)
+            TextField(text: textFieldText, input: $variable)
+            
+            }
+           
+                
+        }
+    }
