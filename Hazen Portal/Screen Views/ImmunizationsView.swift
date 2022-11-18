@@ -36,10 +36,12 @@ struct ImmunizationsView: View {
                     Group { //G1
                         Text("COVID VACCINATION REQUIREMENT:  All SUNY Brockport students must be vaccinated for COVID-19 (2 doses of Moderna, 2 doses of Pfizer or 1 Johnson and Johnson) or have an *approved waiver no later than August 8, 2022 in order to attend classes in person and participate in any on-campus activities")
 
-                        Text("All students are strongly encouraged to have the meningitis vaccine within the last 5 years, on or after their 16th birthday. ")
+                        Text("All students are strongly encouraged to have the meningitis vaccine within the last 5 years, on or after their 16th birthday.")
                         
                       
                     } //G1
+                    .font(.headerText)
+                    .multilineTextAlignment(.leading)
                     .foregroundColor(.red)
                     .padding([.bottom], 5)
 
