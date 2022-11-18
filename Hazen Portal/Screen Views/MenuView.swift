@@ -60,7 +60,7 @@ struct MenuView: View {
                 
                 VStack{
                     
-                        NavigationLink(destination: Text("Hello world"), label: {
+                        NavigationLink(destination: ImmunizationsView(), label: {
                             Image(systemName: "syringe")
                                 .font(.largeTitle)
                                 .frame(width:81.71, height:76.82)
