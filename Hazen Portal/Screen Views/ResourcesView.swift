@@ -282,7 +282,7 @@ func TextBox(text: String) -> some View {
         //.border(.red)
         .foregroundColor(.accentColor)
         .font(.iconText)
-        .padding([.bottom], 10)
+        .padding([.bottom, .trailing], 10)
     
 }
 
