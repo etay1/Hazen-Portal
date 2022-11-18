@@ -16,39 +16,29 @@ struct ResourcesView: View {
             
             ScrollView { //S
                 
-              
-                VStack { //Outer Box
+                GroupBox { // GB
                     
-                    VStack (alignment:.leading){ //V1
-                        Group { //G1
-                            Text("Welcome to My-Hazen your patient portal for the Counseling, Health and Sports Medicine Clinic")
-                                .foregroundColor((Color("Background")))
-                             
-                    
-                            Text("CRISIS TEXT LINE --- NEED SOMEONE TO TALK TO? Text \"Got5U\" to 741-741-Free, 24/7, Confidential text support.")
-                            
-                            Text("If you have a non-urgent medical or psychiatric concern, call 585-395-2414 and press option 1 for the Nurse Advice line. These nurses do NOT have access to you records and are unable to provice prescription refills, test results or make appointments.")
-                            
-                            Text("For emergencies during this time, please call 911 or University Police at 585-395-2222")
-                          
-                        } //G1
-                        .padding([.bottom], 5)
-                      //  .padding([.leading,.trailing], 10)
-                        
-                    }//V1
-                    .font(.headerText)
-                    .foregroundColor(.red)
-                    .padding([.leading,.trailing], 10)
-                    .background(.white)
+                    Group { //G1
+                        Text("Welcome to My-Hazen your patient portal for the Counseling, Health and Sports Medicine Clinic")
+                            .foregroundColor(Color("Background"))
 
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .border(Color("AccentColor"))
-                    
-                }// V Outer
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding([.leading,.trailing, .top, .bottom], 15)
-                .foregroundColor(Color.accentColor)
                 
+                        Text("CRISIS TEXT LINE --- NEED SOMEONE TO TALK TO? Text \"Got5U\" to 741-741-Free, 24/7, Confidential text support.")
+                        
+                        Text("If you have a non-urgent medical or psychiatric concern, call 585-395-2414 and press option 1 for the Nurse Advice line. These nurses do NOT have access to you records and are unable to provice prescription refills, test results or make appointments.")
+                        
+                        Text("For emergencies during this time, please call 911 or University Police at 585-395-2222")
+                      
+                    } //G1
+                    .foregroundColor(.red)
+                    .padding([.bottom], 5)
+                  //  .padding([.leading,.trailing], 10)
+
+                } // GB
+                .groupBoxStyle(ColoredGroupBoxWhite())
+                .padding([.leading,.trailing], 10)
+
+
                 Divider()
                
                 VStack (alignment:.leading){ //V2
@@ -282,7 +272,26 @@ func TextBox(text: String) -> some View {
         //.border(.red)
         .foregroundColor(.accentColor)
         .font(.iconText)
-        .padding([.bottom, .trailing], 10)
+        .padding([.bottom], 10)
     
 }
 
+// gives bg color to group box
+struct ColoredGroupBoxWhite: GroupBoxStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        VStack {
+            HStack {
+                configuration.label
+                    .font(.headline)
+               // Spacer()
+            }
+            
+            configuration.content
+        }
+        .padding()
+        .background(RoundedRectangle(cornerRadius: 8, style: .continuous)
+            .fill(Color(.white))) // Set your color here!!
+       // .border(Color("AccentColor"))
+        
+    }
+}

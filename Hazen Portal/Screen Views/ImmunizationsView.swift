@@ -31,31 +31,25 @@ struct ImmunizationsView: View {
                 
                 //--------------------------------------------------
                 
-                VStack { //Outer Box 1
+                GroupBox { // GB
                     
-                    VStack (alignment:.leading){ //V1
-                        Group { //G1
-                            
-                            Text("COVID VACCINATION REQUIREMENT:  All SUNY Brockport students must be vaccinated for COVID-19 (2 doses of Moderna, 2 doses of Pfizer or 1 Johnson and Johnson) or have an *approved waiver no later than August 8, 2022 in order to attend classes in person and participate in any on-campus activities")
-                                .foregroundColor(.red)
-                            
-                        } //G1
-                        .padding([.bottom], 5)
-                        //  .padding([.leading,.trailing], 10)
+                    Group { //G1
+                        Text("COVID VACCINATION REQUIREMENT:  All SUNY Brockport students must be vaccinated for COVID-19 (2 doses of Moderna, 2 doses of Pfizer or 1 Johnson and Johnson) or have an *approved waiver no later than August 8, 2022 in order to attend classes in person and participate in any on-campus activities")
+
+                        Text("All students are strongly encouraged to have the meningitis vaccine within the last 5 years, on or after their 16th birthday. ")
                         
-                    }//V1
-                    .font(.headerText)
+                      
+                    } //G1
                     .foregroundColor(.red)
-                    .background(.white)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    
-                }// V Outer 1
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding([.leading,.trailing, .top], 15)
-                //.padding([.bottom], 10)
-                .foregroundColor(Color.accentColor)
+                    .padding([.bottom], 5)
+
+                } // GB
+                .groupBoxStyle(ColoredGroupBoxWhite())
+                .padding([.leading,.trailing], 10)
+
                 
                 //--------------------------------------------------
+
                 
                 VStack { //Outer Box 2
                     
@@ -92,6 +86,8 @@ struct ImmunizationsView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                     .foregroundColor(.accentColor)
                     .padding([.leading,.trailing], 15)
+                    .font(.headerText)
+
                 
                 //--------------------------------------------------
                 
@@ -100,8 +96,7 @@ struct ImmunizationsView: View {
                         .padding([.bottom], 5)
                         .bold(true)
                     Text("New York State Public Health Law #2167 requires post secondary students to understand the risks and recommendations of meningococcal meningitis vaccination. You must provide the date of your meningitis vaccine-it must be within the last 5 years or waive out of the vaccine.")
-                    Text("All students are strongly encouraged to have the meningitis vaccine within the last 5 years, on or after their 16th birthday. ")
-                        .foregroundColor(.red)
+                    
                     Text("Meningitis Requirements:")
                         .padding([.bottom, .top], 5)
                         .bold(true)
@@ -116,6 +111,8 @@ struct ImmunizationsView: View {
                     .foregroundColor(.accentColor)
                     .padding([.leading,.trailing], 15)
                     .padding([.top,.bottom], 10)
+                    .font(.headerText)
+
 
                 
             }//S
