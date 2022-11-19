@@ -12,6 +12,7 @@ struct InsuranceView: View {
 
     @State private var isAddExpanded = false
     @State private var isSubmited = false
+    @State private var hasInsurance = true
     
     @State private var insuranceCompany = ""
     @State private var policyNumber = ""
@@ -28,7 +29,9 @@ struct InsuranceView: View {
    
     
     var body: some View {
-        VStack (){ // V0
+        
+       
+        VStack { // V0
             HeaderView(menuShowing: $menuShowing)
             ScrollView { // S
                 
@@ -155,60 +158,42 @@ struct InsuranceView: View {
                         .background(Color.accentColor)
                         .foregroundColor(Color("Background"))
                     
-                    
-                    
-                /*    GroupBox {
-                        HStack {
-                            Text("Empire Blue Cross and Blue Shield")
-            
-                            Text("Entered: 9/05/2021")
-                                .font(.iconText)
-                        }
-                        
-                       Spacer(minLength: 20)
-                        
-                        HStack{
-                            Text("Policy Number: ########")
-                            Text("Group Number: ########")
-                            
-                        }.font(.iconText)
-                        
-                        HStack {
-                            Text("Effectuve date of coverage: 5/13/2022")
-                            VStack (alignment: .leading) {
-                                Text("Upload Card")
-                                HStack {
-                                    Text("View Front")
-                                    Text("View Back")
-                                }
-                             
-                            }
-                                
-                        }.font(.iconText)
-                    }
-                    //.frame(alignment: .leading)
-                    .groupBoxStyle(ColoredGroupBox())
-                   */
+
                     
                 } // V6
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 .padding([.leading,.trailing,.top], 15)
                 .foregroundColor(Color.accentColor)
                 
-                
-                /*
-                HStack {
-                    VStack {
-                        
-                        
-                    }
-                    VStack {
-                        
-                    }
-                }
-                    
+                // only occurs if user has insurance on file
+                if (hasInsurance) {
+                    HStack (alignment: .top){
+                        VStack (alignment: .leading) {
+                            Text("Empire Blue Cross and Blue Shield")
+                            Spacer()
+                            Text("Policy Number: ########")
+                            Text("Effective date of coveraged: 5/13/2022")
                             
-                */
+                        }.padding([.bottom, .top], 5)
+                        VStack (alignment: .trailing){
+                            
+                            Text("Entered: 9/05/2021")
+                            Spacer()
+                            Text("Group Number: ########")
+                           HStack (spacing:15) {
+                                Text("View Front")
+                                Text("View Back")
+                            }
+                          
+                            
+                        }.padding([.bottom, .top], 5)
+                        
+                    }.frame(maxWidth: .infinity,maxHeight: .infinity)
+                        .border(Color.accentColor)
+                        .padding([.leading,.trailing], 15)
+                        .font(.iconText)
+                    
+                }
                  
             
             }// S
