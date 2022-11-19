@@ -259,7 +259,7 @@ struct ResourcesView: View {
 
 struct ResourcesView_Previews: PreviewProvider {
     static var previews: some View {
-        ResourcesView()
+        ResourcesView().preferredColorScheme(.dark)
     }
 }
 
