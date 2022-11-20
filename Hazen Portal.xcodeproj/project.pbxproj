@@ -16,6 +16,7 @@
 		6AC1640428D9830D00A21628 /* Hazen_PortalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1640328D9830D00A21628 /* Hazen_PortalUITests.swift */; };
 		6AC1640628D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1640528D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift */; };
 		6AD00517290B73CE00D9F059 /* ResourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD00516290B73CE00D9F059 /* ResourcesView.swift */; };
+		6AE987F62928899200B0B960 /* FormsRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE987F52928899200B0B960 /* FormsRootView.swift */; };
 		A8221ED528EE2EDE00772636 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8221ED428EE2EDE00772636 /* MenuView.swift */; };
 		A83521E928EC893300C72371 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83521E828EC893300C72371 /* HeaderView.swift */; };
 		A8A5C6F32911DD3700B19D69 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5C6F22911DD3700B19D69 /* UploadView.swift */; };
@@ -60,6 +61,7 @@
 		6AC1640328D9830D00A21628 /* Hazen_PortalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hazen_PortalUITests.swift; sourceTree = "<group>"; };
 		6AC1640528D9830D00A21628 /* Hazen_PortalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hazen_PortalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6AD00516290B73CE00D9F059 /* ResourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesView.swift; sourceTree = "<group>"; };
+		6AE987F52928899200B0B960 /* FormsRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsRootView.swift; sourceTree = "<group>"; };
 		A8221ED428EE2EDE00772636 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		A83521E828EC893300C72371 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		A8A5C6F22911DD3700B19D69 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
@@ -160,9 +162,18 @@
 			path = "Hazen PortalUITests";
 			sourceTree = "<group>";
 		};
+		6AE987F42928898200B0B960 /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				6AE987F52928899200B0B960 /* FormsRootView.swift */,
+			);
+			path = Forms;
+			sourceTree = "<group>";
+		};
 		A8DBAC5A28E62CD9006E829C /* Screen Views */ = {
 			isa = PBXGroup;
 			children = (
+				6AE987F42928898200B0B960 /* Forms */,
 				A8DBAC5828E62C78006E829C /* LoginView.swift */,
 				A8B1BEB028F62D6D004F1473 /* AppointmentView.swift */,
 				A8A5C6F22911DD3700B19D69 /* UploadView.swift */,
@@ -332,6 +343,7 @@
 				6A5AD47A2927A979003F4FA4 /* ImmunizationsView.swift in Sources */,
 				6AC163E928D982FB00A21628 /* Hazen_PortalApp.swift in Sources */,
 				A83521E928EC893300C72371 /* HeaderView.swift in Sources */,
+				6AE987F62928899200B0B960 /* FormsRootView.swift in Sources */,
 				A8DFDA7728E1324300E1F78A /* FontStyles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
