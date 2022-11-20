@@ -121,13 +121,13 @@ struct InsuranceView: View {
                             
                             
                         }.fixedSize(horizontal: true, vertical: false) //  makes box adjust depending on how long the text is
-                            .frame(height: 40)
+                            .frame(height: 30)
                             .padding([.leading,.trailing], 10)
                             .foregroundColor(Color("Background"))
                             .background(Color("AccentColor"))
                             .cornerRadius(8)
                         
-                        //Addition over ---------------------------------------
+                        //Elijah's Addition over ---------------------------------------
                             
                             TextAndTextField(text: "Policy Number *", textFieldText: "Policy Number", variable: $policyNumber)
                             
