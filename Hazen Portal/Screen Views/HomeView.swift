@@ -18,9 +18,25 @@ struct HomeView: View {
                 Text("MyHazen")
                     .font(.loginPrompt)
                     .foregroundColor(Color.accentColor)
+                
+                
+                NavigationLink(destination: SettingsView()){
+                    Image(systemName: "person.crop.circle")
+                           .frame(width: 125, height: 125)
+                           .font(.system(size: 110))
+                           .foregroundColor(Color("Background"))
+                           .background(Color.accentColor)
+                           .clipShape(Circle())
+                           
+                           
+                        }.buttonStyle(PlainButtonStyle())
+            
 
             }.frame(maxWidth: .infinity,maxHeight: 40, alignment: .top)
+                .padding([.top, .bottom], 30)
               //  .border(.red)
+            
+           
         
             MenuView(menuShowing: .constant(false), size:80)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
