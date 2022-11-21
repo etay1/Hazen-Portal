@@ -13,7 +13,11 @@ struct InsuranceView: View {
     @State private var isAddExpanded = false
     @State private var isSubmited = false
     @State private var hasInsurance = true
-    
+    //Elijah's addition
+    @State private var selectedInsurance = "Insurance Company *"
+
+    let insuranceType = ["Company not listed", "Anthem BCBS Georgia", "Anthem BCBS Ohio", "Anthem BCBS Virginia", "BCBS Illinois", "BCBS NJ Horizon", "BCBSMN", "Blue Cross And Blue Shield of Massachusetts", "Blue Cross And Blue Shield of California", "Blue Cross And Blue Shield of Michigan", "Blue Cross And Blue Shield of Western New York", "Blue Cross And Blue Shield of Eastern New York", "BSCal", "CDPHP", "Cigna", "Emblem Health", "Empire Blue Cross and Blue Shield New York", "Excellus Blue Cross Blue Shield Rochester NY", "Fidelis Care", "GHI-Group Haelth Incorporated", "Healthfirst", "Healthsmart", "Hometown Health", "Horizon Blue Cross & Blue Shield of New Jersey", "Independent Health", "Kaiser Foundation Health Plan Of S CA", "Lucent Health", "Magnacare", "Medica", "Medicaid New York", "Medical Insurance", "MetroPlus Health Plan", "Molina Health Care", "Molina Health Care of Michigan", "Molina Health Care of Washington", "MVP Health Care", "NOVA", "Paramount Health Care", "Tricare (military)", "Trustmark Life Insurance Co.", "UMR WAUSAU/UHIS", "United Health Care Community Plan", "United Health Care Student Resources", "United Health Care Worker 1199", "United HealthCare", "United Healthcare ORACLE", "United Healthcare Oxford", "Univera Community Health"]
+    //-- addition over
     @State private var insuranceCompany = ""
     @State private var policyNumber = ""
     @State private var groupNumber = ""
@@ -21,6 +25,7 @@ struct InsuranceView: View {
     @State private var lastName = ""
     @State private var birthDate = ""
     @State private var relationToSubscriber = ""
+    
     
     
     // choices of documents to upload
@@ -88,17 +93,41 @@ struct InsuranceView: View {
                 if (isAddExpanded && !isSubmited) { //IF
                     VStack(alignment: .leading, spacing:10) { // V4
             
-                            
-                            Text("New Insurance")
+                                                        Text("New Insurance")
                                 .frame(maxWidth: .infinity, minHeight: 30, alignment: .leading)
                                 .padding(.leading, 15)
                                 .background(Color.accentColor)
                                 .foregroundColor(Color("Background"))
                             
-                            
-                            
+                        /*                            
                             TextAndTextField(text: "Insurance Company *", textFieldText: "Insurance Company", variable: $insuranceCompany)
-                            //  .padding([.top],10)
+                            //  .padding([.top],10)*/
+                        // Elijah's addition ---------------------------
+                        Menu {
+                            
+                            Picker(selection: $selectedInsurance, label: EmptyView()){
+                                
+                                
+                                ForEach(insuranceType, id: \.self) {
+                                    Text("\($0)")
+                                }
+                                
+                            }
+                            .tint(Color("Background"))
+                            
+                            .background(Color("AccentColor"))
+                        } label: {
+                            CustomLabel(text: selectedInsurance)
+                            
+                            
+                        }.fixedSize(horizontal: true, vertical: false) //  makes box adjust depending on how long the text is
+                            .frame(height: 30)
+                            .padding([.leading,.trailing], 10)
+                            .foregroundColor(Color("Background"))
+                            .background(Color("AccentColor"))
+                            .cornerRadius(8)
+                        
+                        //Elijah's Addition over ---------------------------------------
                             
                             TextAndTextField(text: "Policy Number *", textFieldText: "Policy Number", variable: $policyNumber)
                             

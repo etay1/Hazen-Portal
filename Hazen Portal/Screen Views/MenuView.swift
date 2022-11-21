@@ -97,7 +97,7 @@ struct MenuView: View {
                 
                 VStack{
                 
-                        NavigationLink(destination: SettingsView(), label: {
+                        NavigationLink(destination: FormsRootView(), label: {
                             Image(systemName: "list.clipboard")
                                 .font(.largeTitle)
                                 .frame(width:81.71, height:76.82)
@@ -113,7 +113,7 @@ struct MenuView: View {
                 }
                 VStack{
                    
-                        NavigationLink(destination: Text("Hello world"), label: {
+                        NavigationLink(destination: Text("Hello World"), label: {
                             Image(systemName: "envelope")
                                 .font(.largeTitle)
                                 .frame(width:81.71, height:76.82)
