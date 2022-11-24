@@ -20,14 +20,6 @@ struct MenuViewOppoColor: View {
         NavigationStack{
             
             HStack (spacing:size) {
-                NavigationLink(destination: SettingsView()){
-                    Image(systemName: "person.crop.circle")
-                        .frame(width:81.71, height:76.82,alignment: .bottom)
-                        .font(.system(size: 80))
-                        .foregroundColor(Color("Background"))
-                        .background(Color.accentColor)
-                      //  .clipShape(Circle())
-                }
                 
                 NavigationLink(destination: HomeView()){
                     Image(systemName: "house")
@@ -37,6 +29,15 @@ struct MenuViewOppoColor: View {
                         .background(Color.accentColor)
                        
                 }
+                NavigationLink(destination: SettingsView()){
+                    Image(systemName: "person.crop.circle")
+                        .frame(width:81.71, height:76.82,alignment: .bottom)
+                        .font(.system(size: 80))
+                        .foregroundColor(Color("Background"))
+                        //.background(Color.accentColor)
+                      //  .clipShape(Circle())
+                }
+
           
             }
        

@@ -53,28 +53,30 @@ struct SettingsView: View {
     @State private var isTransMan = false
 
     var body: some View {
-        VStack {
-            
-            HeaderView(menuShowing: $menuShowing)
-            ScrollView {
+        
+        ZStack { // Z0
+            VStack { // V0
                 
-                
-                Text(fullName)
-                    .font(.myHazen)
-                    .font(.socialMedia)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                    .foregroundColor(.accentColor)
-
-//                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-//                    .border(.red)
-//                    .padding([.leading], 15)
-                Text("edit your profile")
-                    .foregroundColor(.accentColor)
-                    .font(.socialMedia)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                HeaderView(menuShowing: $menuShowing)
+                ScrollView { // S
+                    
+                    
+                    Text(fullName)
+                        .font(.myHazen)
+                        .font(.socialMedia)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                        .foregroundColor(.accentColor)
+                    
+                    //                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    //                    .border(.red)
+                    //                    .padding([.leading], 15)
+                    Text("edit your profile")
+                        .foregroundColor(.accentColor)
+                        .font(.socialMedia)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                     //.border(.red)
-              
-                
+                    
+                    
                     Group {
                         Text("Preffered Name")
                             .font(.loginPrompt)
@@ -97,50 +99,50 @@ struct SettingsView: View {
                         TextField(text: "State", input: $state)
                         
                     }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                    .foregroundColor(.accentColor)
-                       // .border(.red)
-                        
+                        .foregroundColor(.accentColor)
+                    // .border(.red)
                     
-                Group {
                     
-                    Text("Home Phone")
-                        .font(.loginPrompt)
-                    TextField(text: "Home Phone", input: $homePhone)
-                    
-                    Text("Work Phone")
-                        .font(.loginPrompt)
-                    TextField(text: "Work Phone", input: $workPhone)
-                    
-                    Text("Cell Phone")
-                        .font(.loginPrompt)
-                    TextField(text: "Cell Phone", input: $cellPhone)
-                    
-      
-                
                     Group {
-                        Text("Preferred Phone Number")
+                        
+                        Text("Home Phone")
                             .font(.loginPrompt)
+                        TextField(text: "Home Phone", input: $homePhone)
+                        
+                        Text("Work Phone")
+                            .font(.loginPrompt)
+                        TextField(text: "Work Phone", input: $workPhone)
+                        
+                        Text("Cell Phone")
+                            .font(.loginPrompt)
+                        TextField(text: "Cell Phone", input: $cellPhone)
                         
                         
                         
-                        Menu {
-                            Button(action: {
-                                prefferedPhone = "Home"
-                            }, label: {
-                                Text("Home")
-                            })
-                            Button(action: {
-                                prefferedPhone = "Work"
-                            }, label: {
-                                Text("Work")
-                            })
-                            Button(action: {
-                                prefferedPhone = "Cell"
-                            }, label: {
-                                Text("Cell")
-                            })
-                        }
-                        // menu label
+                        Group {
+                            Text("Preferred Phone Number")
+                                .font(.loginPrompt)
+                            
+                            
+                            
+                            Menu {
+                                Button(action: {
+                                    prefferedPhone = "Home"
+                                }, label: {
+                                    Text("Home")
+                                })
+                                Button(action: {
+                                    prefferedPhone = "Work"
+                                }, label: {
+                                    Text("Work")
+                                })
+                                Button(action: {
+                                    prefferedPhone = "Cell"
+                                }, label: {
+                                    Text("Cell")
+                                })
+                            }
+                            // menu label
                         label: {
                             Label (title: {Text("\(prefferedPhone)").font(.loginPrompt) },
                                    icon: {Image(systemName: "chevron.down")}
@@ -151,70 +153,81 @@ struct SettingsView: View {
                             
                             
                         }
-                        CheckBoxView(checked: $box1, category: $canRecieveTextMessages, text: "I would like to receive SMS text message reminders. Message and data rates may apply. Message frequency varies.")
-                            .font(.headerText)
-                        Group {
-                          
-                            Text("Text HELP for help. Text STOP to cancel.")
-                            Text("Messages will include appointment reminder notifications, secure message notifications and other important updates.")
+                            CheckBoxView(checked: $box1, category: $canRecieveTextMessages, text: "I would like to receive SMS text message reminders. Message and data rates may apply. Message frequency varies.")
+                                .font(.headerText)
+                            Group {
+                                
+                                Text("Text HELP for help. Text STOP to cancel.")
+                                Text("Messages will include appointment reminder notifications, secure message notifications and other important updates.")
+                                
+                                HStack{
+                                    Text("For Terms:")
+                                    Link("https://medicat.com/sms-service/",
+                                         destination: URL(string: "https://medicat.com/sms-service/")!)
+                                }
+                                HStack{
+                                    // .padding()
+                                    Text("For privacy policy:")
+                                    Link("https://medicat.com/privacy-policy/",
+                                         destination: URL(string: "https://medicat.com/privacy-policy/")!)
+                                }
+                                
+                            }.padding([.leading],23)
+                                .font(.headerText)
                             
-                            HStack{
-                                Text("For Terms:")
-                                Link("https://medicat.com/sms-service/",
-                                      destination: URL(string: "https://medicat.com/sms-service/")!)
-                            }
-                            HStack{
-                               // .padding()
-                                Text("For privacy policy:")
-                                Link("https://medicat.com/privacy-policy/",
-                                      destination: URL(string: "https://medicat.com/privacy-policy/")!)
-                            }
+                            Text("Gender Identity (Check all that apply)")
+                                .font(.loginPrompt)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                                .padding([.top,.bottom], 15)
                             
-                        }.padding([.leading],23)
-                            .font(.headerText)
+                            Group {
+                                
+                                
+                                CheckBoxView(checked: $box2, category: $isAdditionalGender, text: "Additional gender category/(or other), please specify")
+                                CheckBoxView(checked: $box3, category: $isNonDisclosure, text: "Choose not to disclose")
+                                CheckBoxView(checked: $box4, category: $isFemale, text: "Female")
+                                CheckBoxView(checked: $box5, category: $isGenderqueer, text: "Genderqueer, neither exclusively male nor female")
+                                CheckBoxView(checked: $box6, category: $isMale, text: "Male")
+                                CheckBoxView(checked: $box7, category: $isTransMan, text: "Transgender female/Trans woman/Male-to-female")
+                                CheckBoxView(checked: $box8, category: $isTransWoman, text: "Transgender male/Trans male/Female-to-male")
+                                
+                                
+                            }.font(.headerText)
+                            
+                            
+                        }
                         
-                        Text("Gender Identity (Check all that apply)")
-                            .font(.loginPrompt)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                            .padding([.top,.bottom], 15)
-                      
-                        Group {
-                            
-        
-                            CheckBoxView(checked: $box2, category: $isAdditionalGender, text: "Additional gender category/(or other), please specify")
-                            CheckBoxView(checked: $box3, category: $isNonDisclosure, text: "Choose not to disclose")
-                            CheckBoxView(checked: $box4, category: $isFemale, text: "Female")
-                            CheckBoxView(checked: $box5, category: $isGenderqueer, text: "Genderqueer, neither exclusively male nor female")
-                            CheckBoxView(checked: $box6, category: $isMale, text: "Male")
-                            CheckBoxView(checked: $box7, category: $isTransMan, text: "Transgender female/Trans woman/Male-to-female")
-                            CheckBoxView(checked: $box8, category: $isTransWoman, text: "Transgender male/Trans male/Female-to-male")
-                            
-                            
-                        }.font(.headerText)
-                     
-       
-                    }
-                
-                    
-                }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                    .foregroundColor(.accentColor)
+                        
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                        .foregroundColor(.accentColor)
                     //.border(.red)
-                
-            } // S
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-               // .border(.red)
+                    
+                } // S
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                // .border(.red)
                 .padding([.leading], 15)
                 .disabled(menuShowing ? true: false)
                 .blur(radius: menuShowing ? 5: 0)
-            
-            if(menuShowing) {
-                MenuView(menuShowing: $menuShowing, size: 40)
-                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .center)
-             
-                     
                 
-            }
-        }.background(Color("Background"))
+       
+                
+            } // V0
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color("Background"))
+
+            
+            if menuShowing { // IF
+                VStack { // V-HAM
+                    MenuViewOppoColor(menuShowing: $menuShowing, size: 30)
+                        .padding(25)
+                        .background(Color.accentColor)
+                        .cornerRadius(10)
+                }// V-HAM
+            } // IF
+            
+        } // Z0
+        .navigationBarHidden(true)
+       
     }
 }
 struct SettingsView_Previews: PreviewProvider {

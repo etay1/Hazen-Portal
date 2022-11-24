@@ -15,6 +15,8 @@ struct InsuranceView: View {
     @State private var hasInsurance = true
     //Elijah's addition
     @State private var selectedInsurance = "Insurance Company *"
+ 
+    @GestureState private var dragOffset = CGSize.zero
 
     let insuranceType = ["Company not listed", "Anthem BCBS Georgia", "Anthem BCBS Ohio", "Anthem BCBS Virginia", "BCBS Illinois", "BCBS NJ Horizon", "BCBSMN", "Blue Cross And Blue Shield of Massachusetts", "Blue Cross And Blue Shield of California", "Blue Cross And Blue Shield of Michigan", "Blue Cross And Blue Shield of Western New York", "Blue Cross And Blue Shield of Eastern New York", "BSCal", "CDPHP", "Cigna", "Emblem Health", "Empire Blue Cross and Blue Shield New York", "Excellus Blue Cross Blue Shield Rochester NY", "Fidelis Care", "GHI-Group Haelth Incorporated", "Healthfirst", "Healthsmart", "Hometown Health", "Horizon Blue Cross & Blue Shield of New Jersey", "Independent Health", "Kaiser Foundation Health Plan Of S CA", "Lucent Health", "Magnacare", "Medica", "Medicaid New York", "Medical Insurance", "MetroPlus Health Plan", "Molina Health Care", "Molina Health Care of Michigan", "Molina Health Care of Washington", "MVP Health Care", "NOVA", "Paramount Health Care", "Tricare (military)", "Trustmark Life Insurance Co.", "UMR WAUSAU/UHIS", "United Health Care Community Plan", "United Health Care Student Resources", "United Health Care Worker 1199", "United HealthCare", "United Healthcare ORACLE", "United Healthcare Oxford", "Univera Community Health"]
     //-- addition over
@@ -233,13 +235,14 @@ struct InsuranceView: View {
                 .disabled(menuShowing ? true: false)
                 .blur(radius: menuShowing ? 5: 0)
                 
-                
+
                 
                 
             } // V0
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color("Background"))
-            .navigationBarBackButtonHidden()
+
+            
             
             if menuShowing { // IF
                 VStack { // V-HAM
@@ -251,7 +254,8 @@ struct InsuranceView: View {
                         
                 }// V-HAM
             } // IF
-        }
+        } // Z0
+        .navigationBarHidden(true)
     }
 }
 struct InsuranceView_Previews: PreviewProvider {
@@ -275,3 +279,16 @@ struct TextAndTextField : View {
                 
         }
     }
+
+
+// Allows for back swipe gesture without having the navigation bar title
+extension UINavigationController: UIGestureRecognizerDelegate {
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+        interactivePopGestureRecognizer?.delegate = self
+    }
+
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
+    }
+}
