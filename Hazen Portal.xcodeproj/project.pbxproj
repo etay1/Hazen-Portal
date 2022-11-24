@@ -19,6 +19,7 @@
 		6AE987F62928899200B0B960 /* FormsRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE987F52928899200B0B960 /* FormsRootView.swift */; };
 		A8221ED528EE2EDE00772636 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8221ED428EE2EDE00772636 /* MenuView.swift */; };
 		A83521E928EC893300C72371 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83521E828EC893300C72371 /* HeaderView.swift */; };
+		A8575F67292CCC180099F957 /* MenuViewOppoColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8575F66292CCC180099F957 /* MenuViewOppoColor.swift */; };
 		A8A5C6F32911DD3700B19D69 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5C6F22911DD3700B19D69 /* UploadView.swift */; };
 		A8B1BEAC28F48F7C004F1473 /* InsuranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1BEAB28F48F7C004F1473 /* InsuranceView.swift */; };
 		A8B1BEB128F62D6D004F1473 /* AppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1BEB028F62D6D004F1473 /* AppointmentView.swift */; };
@@ -64,6 +65,7 @@
 		6AE987F52928899200B0B960 /* FormsRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsRootView.swift; sourceTree = "<group>"; };
 		A8221ED428EE2EDE00772636 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		A83521E828EC893300C72371 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		A8575F66292CCC180099F957 /* MenuViewOppoColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewOppoColor.swift; sourceTree = "<group>"; };
 		A8A5C6F22911DD3700B19D69 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
 		A8B1BEAB28F48F7C004F1473 /* InsuranceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceView.swift; sourceTree = "<group>"; };
 		A8B1BEB028F62D6D004F1473 /* AppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				A8DBAC5D28E64827006E829C /* HomeView.swift */,
 				A83521E828EC893300C72371 /* HeaderView.swift */,
 				A8221ED428EE2EDE00772636 /* MenuView.swift */,
+				A8575F66292CCC180099F957 /* MenuViewOppoColor.swift */,
 				6AD00516290B73CE00D9F059 /* ResourcesView.swift */,
 				6A5AD4792927A979003F4FA4 /* ImmunizationsView.swift */,
 			);
@@ -345,6 +348,7 @@
 				A83521E928EC893300C72371 /* HeaderView.swift in Sources */,
 				6AE987F62928899200B0B960 /* FormsRootView.swift in Sources */,
 				A8DFDA7728E1324300E1F78A /* FontStyles.swift in Sources */,
+				A8575F67292CCC180099F957 /* MenuViewOppoColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

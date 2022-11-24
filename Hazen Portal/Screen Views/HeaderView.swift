@@ -14,37 +14,68 @@ struct HeaderView: View {
     
     
     var body: some View {
-        
-        Image("header-logo")
-        
-        ZStack {
+        VStack { // V0
+            Image("header-logo")
             
-            Button {
-                menuShowing.toggle()
+            ZStack { //Z0
                 
-            } label: {
-                if(menuShowing){
-                        Image(systemName: "arrow.down")
-                            //.border(.red)
-       
-                }
-                else {
-                        Image(systemName: "arrow.right")
-                            //.border(.red)
-                }
+                Button { // B0
+                   
+                    menuShowing.toggle()
+                    
+    
+                        
+                    
+                } label: { // L0
+                    
+                    
+                        Hamburger()
+                            .rotationEffect(menuShowing ? (Angle(degrees: 90)) : (Angle(degrees: 0)))
+                        
+                    
+                    
+                    /*
+                    if(!menuShowing){ // IF
+                        VStack{ // V1
+                            ColoredIcon(icon: "HLine", color: .accentColor)
+                            ColoredIcon(icon: "HLine", color: .accentColor)
+                            ColoredIcon(icon: "HLine", color: .accentColor)
+                       
+                            
+                        } // V1
+                        .foregroundColor(Color.red)
+                        
+                    } // IF
+                    else { //ELSE
+                        HStack { // H0
+                            ColoredIcon(icon: "VLine", color: .accentColor)
+                            ColoredIcon(icon: "VLine", color: .accentColor)
+                            ColoredIcon(icon: "VLine", color: .accentColor)
+                    
+                           
                 
-            }.padding([.leading], 15)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-            
-            
-            Text("MyHazen")
-                .font(.loginPrompt)
-                .foregroundColor(Color.accentColor)
-            
-            
-        }
+                        } // H1
+                        
+                    } //ELSE
+                    */
+                    
+                    
+                } // L0
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading,15)
+           
+
+                
+                
+                Text("MyHazen")
+                    .font(.loginPrompt)
+                    .foregroundColor(Color.accentColor)
+                    .frame(maxWidth: .infinity, alignment: .center)
+            } //Z0
+           
+        } // V0
         .frame(maxWidth: .infinity, maxHeight: 40, alignment: .center)
-        //.border(.red)
+        .padding(.bottom,20)
         
         
         
@@ -66,3 +97,23 @@ struct HeaderView_PreviewsFalse: PreviewProvider {
 }
 
 
+struct Hamburger : View {
+
+
+    var body: some View {
+        VStack {
+            Image("HLine")
+                .renderingMode(.template)
+                .foregroundColor(Color.accentColor)
+            
+            Image("HLine")
+                .renderingMode(.template)
+                .foregroundColor(Color.accentColor)
+            
+            Image("HLine")
+                .renderingMode(.template)
+                .foregroundColor(Color.accentColor)
+                .transition(.move(edge: .top))
+        }
+    }
+}
