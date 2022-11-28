@@ -30,158 +30,165 @@ struct UploadView: View {
    
     
     var body: some View {
-        VStack { // V0
-            HeaderView(menuShowing: $menuShowing)
-            ScrollView { // S
-                
-                VStack (alignment: .leading) {
-                    Text("Upload")
-                    GroupBox { // GB
-                        
-                        VStack (alignment: .leading) { // V2
-                            Text("STUDENTS SUBMITTING REQUIRED WEEKLY COVID TESTING RESULTS GO TO: ")
+        ZStack { // Z0
+            VStack { // V0
+                HeaderView(menuShowing: $menuShowing)
+                ScrollView { // S
+                    
+                    VStack (alignment: .leading) {
+                        Text("Upload")
+                        GroupBox { // GB
                             
-                            
-                            Link(destination: URL(string: "https://www.brockport.edu/coronavirus/pool_testing.html")!, label: {
-                                Text("https://www.brockport.edu/coronavirus/pool_testing.html")
-                                    .underline()
+                            VStack (alignment: .leading) { // V2
+                                Text("STUDENTS SUBMITTING REQUIRED WEEKLY COVID TESTING RESULTS GO TO: ")
                                 
-                            })
+                                
+                                Link(destination: URL(string: "https://www.brockport.edu/coronavirus/pool_testing.html")!, label: {
+                                    Text("https://www.brockport.edu/coronavirus/pool_testing.html")
+                                        .underline()
+                                    
+                                })
+                                
+                                Text("\nUPLOADING / FAXING INSTRUCTIONS")
+                                Text("Name, Banner ID #, Date of Birth and Sport if applicable,(eg. Baseball are needed on all forms")
+                                
+                            } // V2
                             
-                            Text("\nUPLOADING / FAXING INSTRUCTIONS")
-                            Text("Name, Banner ID #, Date of Birth and Sport if applicable,(eg. Baseball are needed on all forms")
+                            VStack (alignment: .leading) { // V3
+                                BulletPointView(text: "Scan and save all pages of one document to one file (eg. physical.pdf).")
+                                BulletPointView(text: "File should be less than 4 MB and name of document less than 20 characters with no special characters or spaces.")
+                                BulletPointView(text: "Review the type of documents you can upload.")
+                                BulletPointView(text:"Choose document you are uploading.")
+                                BulletPointView(text: "Click Upload button ONCE and then look for the verification of the uploaded document below.")
+                                BulletPointView(text: "To upload Insurance Card, go to the Insurance tab. If you upload an insurance card here, it cannot be processed properly.")
+                                BulletPointView(text: "Unable to scan and upload forms, fax forms to 585-395-2559.")
+                            } // V3
                             
-                        } // V2
+                        }.background(Color("BackgroudColor"))
+                        // GB
+                            .groupBoxStyle(ColoredGroupBox())
                         
-                        VStack (alignment: .leading) { // V3
-                            BulletPointView(text: "Scan and save all pages of one document to one file (eg. physical.pdf).")
-                            BulletPointView(text: "File should be less than 4 MB and name of document less than 20 characters with no special characters or spaces.")
-                            BulletPointView(text: "Review the type of documents you can upload.")
-                            BulletPointView(text:"Choose document you are uploading.")
-                            BulletPointView(text: "Click Upload button ONCE and then look for the verification of the uploaded document below.")
-                            BulletPointView(text: "To upload Insurance Card, go to the Insurance tab. If you upload an insurance card here, it cannot be processed properly.")
-                            BulletPointView(text: "Unable to scan and upload forms, fax forms to 585-395-2559.")
-                        } // V3
-    
-                    }.background(Color("BackgroudColor"))
-                    // GB
-                        .groupBoxStyle(ColoredGroupBox())
-            
+                        
+                    } // V1
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    .padding([.leading,.trailing], 15)
+                    .foregroundColor(Color.accentColor)
                     
-                } // V1
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                .padding([.leading,.trailing], 15)
-                .foregroundColor(Color.accentColor)
-                
-                //.border(.red)
-                
-                
-                VStack (alignment: .leading){ // V4
-                    Text("Documents available to be uploaded")
-                    Text("Athlete Physical")
-                    Text("Clearance Letter For Athletes")
-                    Text("Consent For Release Of Records")
-                    Text("COVID 19 Medical Exemption Letter")
-                    Text("COVID Test Results")
-                    Text("COVID Vaccine Records")
-                    Text("Documentation For Food Accomodations")
-                    Link(destination: URL(string: "https://www.brockport.edu/life/health_center/docs/consent_for_minors.pdf")!, label: {
-                        Text("HC-Consent For Treatment Of Minors")
-                    })
+                    //.border(.red)
                     
-                    Group { // G1
+                    
+                    VStack (alignment: .leading){ // V4
+                        Text("Documents available to be uploaded")
+                        Text("Athlete Physical")
+                        Text("Clearance Letter For Athletes")
+                        Text("Consent For Release Of Records")
+                        Text("COVID 19 Medical Exemption Letter")
+                        Text("COVID Test Results")
                         Text("COVID Vaccine Records")
-                        Text("Immunization Records")
-                        Text("Medical Information Requested By Health Center")
-                        Text("Paired Organ Waiver")
-                        Text("Sickle Cell Results Submitted Athlete")
-
-                    } // G1
-                    
-                    
-                    
-                } // V4
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                .padding([.leading,.trailing,.top], 15)
-                .foregroundColor(Color.accentColor)
-                
-                VStack (alignment: .leading, spacing: 5) { // V5
-                    
-                    Text("Choose document you are uploading:")
-                    Menu {
+                        Text("Documentation For Food Accomodations")
+                        Link(destination: URL(string: "https://www.brockport.edu/life/health_center/docs/consent_for_minors.pdf")!, label: {
+                            Text("HC-Consent For Treatment Of Minors")
+                        })
                         
-                        Picker(selection: $selectedDocument, label: EmptyView()){
+                        Group { // G1
+                            Text("COVID Vaccine Records")
+                            Text("Immunization Records")
+                            Text("Medical Information Requested By Health Center")
+                            Text("Paired Organ Waiver")
+                            Text("Sickle Cell Results Submitted Athlete")
                             
+                        } // G1
+                        
+                        
+                        
+                    } // V4
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    .padding([.leading,.trailing,.top], 15)
+                    .foregroundColor(Color.accentColor)
+                    
+                    VStack (alignment: .leading, spacing: 5) { // V5
+                        
+                        Text("Choose document you are uploading:")
+                        Menu {
                             
-                            ForEach(documentType, id: \.self) {
-                                Text("\($0)")
+                            Picker(selection: $selectedDocument, label: EmptyView()){
+                                
+                                
+                                ForEach(documentType, id: \.self) {
+                                    Text("\($0)")
+                                }
+                                
                             }
+                            .tint(Color("Background"))
                             
+                            .background(Color("AccentColor"))
+                        } label: {
+                            CustomLabel(text: selectedDocument)
+                            
+                            
+                        }.fixedSize(horizontal: true, vertical: false) //  makes box adjust depending on how long the text is
+                            .frame(height: 40)
+                            .padding([.leading,.trailing], 10)
+                            .foregroundColor(Color("Background"))
+                            .background(Color("AccentColor"))
+                            .cornerRadius(8)
+                        
+                        if !isSubmited {
+                            switch selectedDocument {
+                            case "Athlete Physical" :
+                                Text("This is required for New/New Transfer NCAA athletes. Please only submit your physical here. DO NOT USE THIS TITLE TO SEND OTHER DOCUMENTS.")
+                                    .bold()
+                                if isVerified == false {
+                                    UploadButton(boxText: "Select File", outsideBox: "", isVerified: $isVerified,userDocument: $userDocument)
+                                }
+                                else {
+                                    UploadButton(boxText: "Change", outsideBox: userDocument , isVerified: $isVerified, userDocument: $userDocument)
+                                    SubmitButton(isSubmmited: $isSubmited)
+                                }
+                            default:
+                                EmptyView()
+                            }
                         }
-                        .tint(Color("Background"))
-                        
-                        .background(Color("AccentColor"))
-                    } label: {
-                        CustomLabel(text: selectedDocument)
                         
                         
-                    }.fixedSize(horizontal: true, vertical: false) //  makes box adjust depending on how long the text is
-                        .frame(height: 40)
-                        .padding([.leading,.trailing], 10)
-                        .foregroundColor(Color("Background"))
-                        .background(Color("AccentColor"))
-                        .cornerRadius(8)
-                    
-                    if !isSubmited {
-                        switch selectedDocument {
-                        case "Athlete Physical" :
-                            Text("This is required for New/New Transfer NCAA athletes. Please only submit your physical here. DO NOT USE THIS TITLE TO SEND OTHER DOCUMENTS.")
-                                .bold()
-                            if isVerified == false {
-                                UploadButton(boxText: "Select File", outsideBox: "", isVerified: $isVerified,userDocument: $userDocument)
-                            }
-                            else {
-                                UploadButton(boxText: "Change", outsideBox: userDocument , isVerified: $isVerified, userDocument: $userDocument)
-                                SubmitButton(isSubmmited: $isSubmited)
-                            }
-                        default:
-                            EmptyView()
-                        }
-                    }
+                        
+                        
+                        
+                    } // V5
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    .padding([.leading,.trailing,.top], 15)
+                    .foregroundColor(Color.accentColor)
                     
                     
-   
                     
-                    
-                } // V5
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                .padding([.leading,.trailing,.top], 15)
-                .foregroundColor(Color.accentColor)
-            
-                
-                
-            }// S
-            .frame(maxWidth: .infinity,maxHeight: .infinity)
-            //.padding([.leading], 15)
+                }// S
+                .frame(maxWidth: .infinity,maxHeight: .infinity)
+                //.padding([.leading], 15)
                 .disabled(menuShowing ? true: false)
                 .blur(radius: menuShowing ? 5: 0)
-        
-
-           
-            if(menuShowing) {
-                MenuView(menuShowing: $menuShowing, size: 40)
-                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .center)
-            //  .border(.red)
-                 
+                
+                
+              
+                
+                
+            } // V0
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color("Background"))
+            .navigationBarBackButtonHidden()
             
-            }
+            if menuShowing { // IF
+                VStack { // V-HAM
+                    MenuViewOppoColor(menuShowing: $menuShowing, size: 30)
+                        .padding(25)
+                        .background(Color.accentColor)
+                        .cornerRadius(10)
+                        
+                        
+                }// V-HAM
+            } // IF
             
-            
-        } // V0
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color("Background"))
-        .navigationBarBackButtonHidden()
-        
+        } // Z0
+        .navigationBarHidden(true)
     }
 }
 
