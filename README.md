@@ -10,10 +10,6 @@ Elijah Tay
 
 Corey Bright
 
-## Version History
-
-## License
-
 ## Acknowledgments
 We extend our heartfelt gratitude to SUNY Brockport for honoring our dedication and innovation with the prestigious undergraduate research award. This recognition underscores the significance of our work on the Hazen Health Center App, which aims to enhance the health experience for the university community.
 
